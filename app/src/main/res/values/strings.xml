@@ -753,4 +753,47 @@ Different Hooks provided by the AUTOSAR-OS are\n
 </string>
 
 
+    <string name="a1">
+        The interoperability of solutions requires a high quality standard. AUTOSAR has defined a process to ensure such high quality when changes are introduced in a revision or when new features are introduced in new minor or major releases.
+        \n\n
+        AUTOSAR is also continuously monitoring the interoperability of AUTOSAR tool chain solutions and provide acceptance tests for the Classic Platform which enable an early assessment of suppliers’ basic software solutions in a development process.
+        \n\n
+        AUTOSAR’s Adaptive Platform is designed for interoperability with other software platforms. By using dynamic service oriented communication patterns, applications can easily exchange information with for example infotainment systems.
+    </string>
+    <string name="a2">
+        New use-cases require the development of the Adaptive Platform.
+        \n
+        Highly automated driving where the driver temporarily and/or partially passes responsibility for driving to the vehicle. This requires for instance communication with traffic lights, the use of high-performance micro-controllers and computing.
+        \n\n
+        Car-2-X applications require interaction to vehicles and off-board systems. That means the system has to provide secure on-board communication, support of cross domain computing platforms, smartphone integration, integration of non-AUTOSAR systems, and so on.
+        \n\n
+        Cloud based services will require dedicated means for security such as secure cloud interaction and emergency vehicle preemption. They will enable remote and distributed services, for instance remote diagnostics, in-field flashing, repair and exchange handling.
+    </string>
+    <string name="a3">
+        The Classic Platform is the first choice for deeply embedded ECUs with high demands regarding safety and deterministic execution. It targets small and medium sized microcontrollers.
+        \n\n
+        The Adaptive Platform supports adaptive deployment of applications and interaction with Classic Platform and non-AUTOSAR systems. It targets high performance microcontrollers.
+    </string>
+    <string name="a4">
+        Updates and improvements of the standard will be introduced by future versions of AUTOSAR. Corrections are handled by a change management process and are provided as revisions of the existing releases. New features are matured in concepts which are introduced only in new releases. New minor releases accept only backward compatible features whereas major releases could introduce non backward compatible features. The AUTOSAR versions are numbered according to this scheme: &lt;major release&gt;.&lt;minor release&gt;.&lt;revision&gt;.
+        \n\n
+        AUTOSAR’s standard Adaptive Platform makes use of agile development methods. That means functions and updates are developed in sprints. There is a regular release cycle to introduce those functions and updates into the market.
+    </string>
+    <string name="a5">
+        Yes, AUTOSAR provides application interfaces for Body, Chassis, Pedestrian and Occupant Safety, and Powertrain applications.
+    </string>
+    <string name="a6">
+        One of the main requirements of AUTOSAR is to assure the interoperability with legacy software. This will enable the re-use of existing, non-AUTOSAR compliant software, e.g. drivers. The most obvious way to reach this integration is using a Complex Driver as a wrapper around the non-AUTOSAR compliant software.
+    </string>
+    <string name="a7">
+        The acceptance of AUTOSAR will depend heavily on processing and memory requirements. The modular architecture of AUTOSAR provides a scalable solution where users or implementers can discard modules or configure out features of the basic software in order to limit the memory and performance impacts in micro controllers.
+    </string>
+    <string name="a8">
+        Using and implementing existing standards is given the highest priority.
+        \n\n
+        This has been the case since the beginning of the project. For example AUTOSAR’s operating system and communication stack were based on OSEK, and the AUTOSAR System Template was based on ASAM. Furthermore AUTOSAR introduces support for new standard when there is a market need for the automotive industry.
+        \n\n
+        As AUTOSAR members also participate to the elaboration of other standard, it has been possible to provide, with AUTOSAR, and standardized software solution to implement other standard as soon as they are published. For instance functional safety mechanisms were added to support ISO 26262, and the partial networking or Can FD concepts were introduced to support new versions of ISO 11898.
+    </string>
+
 </resources>
