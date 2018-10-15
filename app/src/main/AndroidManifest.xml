@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.nikhilreddy.ass">
+
+    <!-- Permission for using caller or phone -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name=".IntroApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- The Intro screen of the app -->
+        <activity
+            android:name=".WelcomeActivity"
+            android:theme="@style/IntroTheme"/>
+
+        <!-- The home page of the app -->
+        <activity
+            android:name=".MainActivity"
+            android:label="ASLA"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"/>
+
+        <!-- Parts of Tutorials -->
+        <activity
+            android:name=".BeginnerTutorialActivity"
+            android:label="Tutorial"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Parts of Quiz -->
+        <activity
+            android:name=".EasyQuizActivity"
+            android:label="Easy"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MediumQuizActivity"
+            android:label="Medium"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".HardQuizActivity"
+            android:label="Hard"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- FAQ activity -->
+        <activity
+            android:name=".FaqActivity"
+            android:label="F.A.Q"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Articles activity -->
+        <activity
+            android:name=".ArticlesActivity"
+            android:label="Links &amp; Info"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- For showing contact us information -->
+        <activity
+            android:name=".ContactActivity"
+            android:label="Contact"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- For showing why ZF -->
+        <activity
+            android:name=".ZFActivity"
+            android:label="Why ZF"
+            android:parentActivityName=".MainActivity"/>
+
+        <!-- For showing why AUTOSAR -->
+        <activity
+            android:name=".AutosarActivity"
+            android:label="Why AUTOSAR"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".displayContent"
+            android:label="Tutorial"
+            android:parentActivityName=".BeginnerTutorialActivity" />
+        <activity
+            android:name=".Splash"
+            android:theme="@style/splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".questionsActivity"></activity>
+    </application>
+
+</manifest>

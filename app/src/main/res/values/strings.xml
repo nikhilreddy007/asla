@@ -1,0 +1,756 @@
+<resources>
+    <string name="app_name">ASLA</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="description">description</string>
+    <string name="articles">Articles</string>
+    <string name="faq">F.A.Q</string>
+    <string name="quiz">Quiz</string>
+    <string name="beginner">Beginner</string>
+    <string name="intermediate">Intermediate</string>
+    <string name="advanced">Advanced</string>
+    <string name="general">General</string>g
+    <string name="specific">Project specific</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="contact_us">Contact us</string>
+    <string name="help">Help</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="got_it">GOT IT</string>
+
+    <string name="t0_0">What is Autosar?</string>
+    <string name="t0_1">Basic AUTOSAR Approach</string>
+    <string name="t0_2">Autosar Architecture</string>
+    <string name="t0_3">Microcontroller Abstraction Layer</string>
+    <string name="t0_4">ECU Abstraction Layer</string>
+    <string name="t0_5">Complex Driver</string>
+    <string name="t0_6">Services Layer</string>
+    <string name="t0_7">Run Time Environment (RTE)</string>
+    <string name="t0_8">Autosar Methodology</string>
+    <string name="t1_0">Why is the focus on Automotives?</string>
+    <string name="t2_1">Standards before Autosar</string>
+    <string name="t3_0">Layered Architecture</string>
+    <string name="t4_0">AUTOSAR Application Layer</string>
+    <string name="t5_0">AUTOSAR application software components</string>
+    <string name="t5_1">Types of Software Components</string>
+    <string name="t6_0">The AUTOSAR Ports</string>
+    <string name="t7_0">The AUTOSAR Port Interfaces</string>
+    <string name="t7_1">Client-Server interface</string>
+    <string name="t7_2">Sender-Receiver interface</string>
+    <string name="t8_0">AUTOSAR Runtime Environment (RTE)</string>
+    <string name="t9_0">Interfaces</string>
+    <string name="t10_0">RTE Generation Process</string>
+    <string name="t10_1">RTE Contract phase</string>
+    <string name="t10_2">RTE Generation phase</string>
+    <string name="t11_0">RTE Mapping</string>
+    <string name="t11_1">Access to ports from a software component implementation</string>
+    <string name="t11_2">Access to Basic Software</string>
+    <string name="t12_0">AUTOSAR Base Software (BSW)</string>
+    <string name="t13_0">Memory Stack (MemStack)</string>
+    <string name="t13_1">Introduction</string>
+    <string name="t13_2">Non-Volatile Memory Manager (NvM)</string>
+    <string name="t13_3">Memory Interface (MemIf) Module</string>
+    <string name="t13_4">EEPROM Abstraction(Ea.)</string>
+    <string name="t13_5">EEPROM Drivers</string>
+    <string name="t13_6">Flash EEPROM Emulation (FEE) Module</string>
+    <string name="t13_7">Flash Driver</string>
+    <string name="t13_8">Complex Drivers</string>
+    <string name="t14_0">Communication Stack (ComStack)</string>
+    <string name="t14_1">Communication stack in AUTOSAR layered architecture is a set of following software modules</string>
+    <string name="t14_2">Modules of COM Stack</string>
+    <string name="t15_0">Diagnostic Stack (DiagStack)</string>
+    <string name="t15_1">Definition</string>
+    <string name="t16_0">Modules of Diagnostic Communication Manager (DCM)</string>
+    <string name="t17_0">Autosar OS</string>
+    <string name="t18_0">Scalability Class</string>
+    <string name="t19_0">Task</string>
+    <string name="t19_1">Stages of Task:</string>
+    <string name="t19_2">Task Activation</string>
+    <string name="t19_3">Task Configuration Parameters:</string>
+    <string name="t20_0">Scheduling</string>
+    <string name="t20_1">Fully-Preemptive Scheduling</string>
+    <string name="t20_2">Non-Preemptive Scheduling </string>
+    <string name="t21_0">Interrupts</string>
+    <string name="t22_0">Resources</string>
+    <string name="t23_0">Events</string>
+    <string name="t24_0">Counters</string>
+    <string name="t25_0">Alarms</string>
+    <string name="t26_0">Schedule Table</string>
+    <string name="t27_0">Hooks</string>
+
+
+    <string name="m0_0">Autosar is a software standard of implementing one or many functionalities in a system. This is specially designed for Automotive applications. This pursues the objective of creating and establishing an open and standardized software architecture for Automotive Electronic Control Units.
+AUTOSAR (Automotive Open System Architecture) is an open and standardized automotive software architecture, jointly developed by automobile manufacturers, suppliers and tool developers.
+The AUTOSAR standard consists of a set of specifications that describe a software architecture, application interfaces and a methodology.</string>
+    <string name="m0_1"></string>
+    <string name="m0_2">AUTOSAR architecture consists of the three different layers.\n
+•Application Layer\n
+•Runtime Environment\n
+•Basic Software Layer\n
+?Services layer\n
+?ECU Abstraction Layer\n
+?Complex Drivers\n
+?Microcontroller Abstraction layer\n
+The basic software layers are further divided into functional groups (below refer to Autosar R4.3).
+</string>
+    <string name="m0_3">Microcontroller Abstraction Layer contains internal drivers, which are software modules with direct access to the microcontroller and internal peripherals.
+Example: CAN, PORT, MCU, DIO
+</string>
+    <string name="m0_4">ECU Abstraction Layer offers an API for access to peripherals and devices regardless of their location (µC internal/external) and their connection to the µC (port pins, type of interface).Make higher software layers independent of ECU hardware layout.
+Example: Can Interface (CanIf), Eeprom Abstraction (EA)
+</string>
+    <string name="m0_5">A Complex Driver is a software entity not standardized by AUTOSAR that can access or be accessed via AUTOSAR Interfaces and/or Basic Software Modules APIs.
+The main goal of the CDD is to implement complex sensor evaluation and actuator control with direct access to the microcontroller.
+Example: Injection control, Electric valve control.
+</string>
+    <string name="m0_6">Services Layer provides basic services for applications and basic software modules.\n
+•	Operating system functionality\n
+•	Memory services (NVRAM management)\n
+•	Diagnostic Services\n
+•	ECU state management\n
+As per AUTOSAR revision 4.3, the BSW contains below set of modules.</string>
+    <string name="m0_7">RTE is a layer providing communication services to the application software (AUTOSAR Software Components and/or AUTOSAR Sensor/Actuator components).
+The AUTOSAR Software Components communicate with other components (inter and/or intra ECU) and/or services via the RTE.
+Make AUTOSAR Software Components independent from the mapping to a specific ECU.\n
+Rte Contract Phase\n
+A limited set of information about a component, principally the AUTOSAR interface de?nitions, are used to create an application header ?le for a component type. The application header ?le de?nes the “contract” between component and RTE.
+Example: Function Declarations
+Rte Generation Phase\n
+All relevant information about components, their deployment to ECUs and communication connections are used to generate the RTE and optionally the IOC con?guration. RTE generated for each ECU in the system.
+Example: Function Definitions\n
+Application Software
+Application software for AUTOSAR is separated in several Software Components (SW-C), which manage to serve a functionality by working together. Software Components are realized through normal C-functions.
+SWC Description\n
+Interface Descriptions: provides the details of\n
+        •	Does the software component communicate with other software components, Basic software modules or anything else?\n
+        •	Which data elements i.e. datatypes are transmitted?\n
+        •	Which type of communication approach is used?\n
+Atomic Software Component: provides the details of\n
+        •	Which ports does the software component contain?\n
+        •	Are these particular ports receiving or sending ports?\n
+        •	Is it possible to instantiate more than one instance of this software component?\n
+Internal Behaviour: provides the details of\n
+        •	How the runnable entities are activated?\n
+        •	Which runnable entity needs which port?\n
+        •	Does the runnable entity access an inter runnable variable or even an exclusive area?\n
+Compositions: provides the details of\n
+        •	Which software components belong together?\n
+        •	How do these software components interact with each other?\n
+        •	Which elements will be transmitted between them?\n
+Implementation: provides the details of\n
+        •	Where is the code that has to be executed?\n
+        •	Is the code precompiled or not?\n
+Configuration Classes\n
+Below are the three different AUTOSAR configuration classes.
+Pre-compile time\n
+        •	Preprocessor instructions\n
+        •	Code generation (selection or synthetization)\n
+Link time\n
+        •	Constant data outside the module; the data can be configured after the module has been compiled\n
+Post-build time\n
+        •	Loadable constant data outside the module. Very similar to Link time, but the data is located in a specific memory segment that allows reloading (e.g. reflashing in ECU production line).\n
+        •	Single or multiple configuration sets can be provided. In case that multiple configuration sets are provided, the actually used configuration set is to be specified at runtime.\n
+</string>
+    <string name="m0_8">System Configuration Description: Includes all system information and the information that must be agreed between different ECUs.
+System Configuration Extractor: Extracts the information from the System Configuration Description needed for a specific ECU\n
+ECU extract: The information from the System Configuration Description needed for a specific ECU\n
+ECU Configuration Description: All information that is local to a specific ECU the runnable software can be built from this information and the code of the software component.
+</string>
+    <string name="m1_0">In a modern car the typical number of lines of code is 100M and is still counting. Now one can imagine if a common standard is not setup, companies will be floating with their own standards.
+In such cases customers face high maintenance costs. Besides companies have to invest a lot in their Research and Development for producing something new all the times. Thus great decrease in the cost of automotive standards are noticed because of globally accepted Autosar standard.
+
+</string>
+    <string name="m2_0">HIS:    Hersteller initiative software (“OEM Software Initiative”)\n
+ASAM:    Association for Standardization of Automation and Measuring Systems.\n
+ISO:    International Organization for Standardization.\n
+OSEK:  A German abbreviation equivalent to “Open Systems and their interfaces for electronics in motor vehicle”.\n
+Companies maintained different engineers as per the above standards which is hard for the management to acquire and maintain the human resources.
+</string>
+
+    <string name="m3_0">The autosar is described in terms of three layers namely\n
+Application layer\n
+Run Time Environment (RTE)\n
+Basic Software (BSW)\n
+The procedural reading of the document makes one perceive the detailed content in the form of following diagram. This is one of the objectives in making this document.
+ </string>
+    <string name="m4_0">The AUTOSAR application layer includes various application specific software components that are designed to execute specific set of tasks, as per the use-case.\n
+?The AUTOSAR Application layer constitutes the topmost layer within an AUTOSAR software architecture and is identified to be critical for all the vehicle applications.\n
+?The AUTOSAR standard specifies the application layer implementation using a “component” concept.\n
+?While talking about the application layer implementation, three of the most important parts that should be considered are:\n
+
+?	The AUTOSAR application software components\n
+?	The AUTOSAR ports of these components\n
+?	The AUTOSAR Port Interfaces\n
+    </string>
+    <string name="m5_0">AUTOSAR defines standardized interfaces associated with all the application software components required to develop automotive applications.\n
+
+?	In the context of the Application Software Components, there are certain entities called the Runnables, which are basically the procedures that contain the actual implementation of the software components.
+?	Runnable are defined as the smallest fragments of code or a sequence of instructions given by component and executed by RTE.
+?	A runnable entity is triggered either cyclically or during an event such as data reception.
+</string>
+    <string name="m5_1">Sensor/Actuator Software Component: A type of AUTOSAR Software Component for handling sensor evaluation and actuator control functions. This particular AUTOSAR Software Component depends on the associated sensor/actuator and is independent of the specific ECU, to which it is mapped to.\n
+?	Atomic Software Component: An atomic software component is the smallest form of software component that cannot be decomposed further into smaller units.\n
+?	Composite Software Component: Logical organization of software components and/or composite components.
+</string>
+    <string name="m6_0">Interfaces between Software components are called ports.\n
+?	Ports are either Sender/Receiver ports or Client/Server ports.\n
+?	Sender/Receiver ports contain data elements that are assigned to network signals.\n
+?	Client/Server ports contain operations with arguments.\n
+?	Ports are joined by connectors.
+</string>
+    <string name="m7_0">The port interface required by an application software component serves as the input to the RTE port creation.\n
+?	An AUTOSAR Interface is categorized into:
+</string>
+    <string name="m7_1">This interface defines a set of operations that can be invoked based on the client-server pattern.\n
+?	 Here the client initiates the communication, and requests the server to perform a service.\n
+?	The server performs the request service and sends a response to the request.\n
+?	The direction of the message initiation can be used to identify if the AUTOSAR Software Component is a client or a server.\n
+?	In the diagram below, the client the AUTOSAR SWCs, client 1 and 2 respectively , request a service through the RPorts ( Request Port) which is sent to the, the server AUTOSAR SWC which offers the required services through the PPort ( provider Port).
+</string>
+    <string name="m7_2">Sender-Receiver communication is used for asynchronous data transmission.</string>
+    <string name="m8_0">The RTE is the realization (for a particular ECU) of the interfaces of the AUTOSAR Virtual Function Bus (VFB).
+?	The RTE provides the infrastructure services that enable communication to occur between AUTOSAR software-components as well as acting as the means by which AUTOSAR software-components access basic software modules including the OS and communication service.\n
+?	Task: Make AUTOSAR Software Components independent from the mapping to a specific ECU.\n
+?	In principle the RTE can be logically divided into two sub-parts realizing:\n
+?	The communication between software components.\n
+?	The scheduling of the software components.\n
+?	The RTE supports two modes of Sender-Receiver communication:\n
+?	Explicit: A component uses explicit RTE API calls to send and receive data elements.\n
+?	Implicit: The RTE automatically reads a specified set of data elements before a runnable is invoked and automatically writes set of data elements after the runnable entity has terminated.
+</string>
+    <string name="m9_0">The RTE is the realization (for a particular ECU) of the interfaces of the AUTOSAR Virtual Function Bus (VFB).\n
+?	The RTE provides the infrastructure services that enable communication to occur between AUTOSAR software-components as well as acting as the means by which AUTOSAR software-components access basic software modules including the OS and communication service.\n
+?	Task: Make AUTOSAR Software Components independent from the mapping to a specific ECU.\n
+?	In principle the RTE can be logically divided into two sub-parts realizing:\n
+?	The communication between software components.\n
+?	The scheduling of the software components.\n
+?	The RTE supports two modes of Sender-Receiver communication:\n
+?	Explicit: A component uses explicit RTE API calls to send and receive data elements.\n
+?	Implicit: The RTE automatically reads a specified set of data elements before a runnable is invoked and automatically writes set of data elements after the runnable entity has terminated.
+</string>
+    <string name="m10_1">A limited set of information about a component, principally the AUTOSAR interface de?nitions, is used to create an application header ?le for a component type.\n
+?	The application header ?le de?nes the “contract” between component and RTE.
+</string>
+    <string name="m10_2">All relevant information about components, their deployment to ECUs and communication connections is used to generate the RTE and optionally the IOC con?guration.\n
+?	RTE is generated for each ECU in the system.
+</string>
+    <string name="m11_1">The implementation of an AUTOSAR Software Component is not allowed to use the communication layer, for example OSEK COM, directly.\n
+?	To communicate with other software components it uses ports and client-server communication or sender-receiver communication.
+</string>
+    <string name="m11_2">An AUTOSAR Software Component is not allowed to access Basic Software directly.\n
+?	Firstly, the access to services, to the ECU abstraction, or to Complex Device Drivers is abstracted via ports and AUTOSAR interfaces.\n
+?	With respect to the component implementation, the RTE provides appropriately generated APIs for Basic Software access.\n
+
+?	In the below diagram, it is shown how different types of mapping can be done through RTE.
+</string>
+    <string name="m12_0">Each layer of base software implements their functionality to make their upper layers independent of the lower layers.</string>
+    <string name="m13_0">•	Memory Stack (MemStack) provides basic memory management services like Read/Write/Erase/WriteAll/ReadAll to the upper Application layer and to the Basic Software Modules (BSW) of the AUTOSAR layered architecture.\n
+
+•	Memory stack is responsible for validation of the data consistency using measures like CRC, redundancy, and mirror block concept.\n
+
+•	The memory management services ensure access to the memory cluster, to the devices or software functions, for reading and writing data to non-volatile memory media like Flash or EEPROM\n
+•	Memory stack provides services like WriteAll which is performed during Shutdown phase where the all the modified blocks are written at once.\n
+
+•	Memory stack provides services like ReadAll which is performed during StartUp phase where the all the modified blocks are written at once.\n
+
+•	Memory stack allocates RAM for CRC memory storage\n
+
+•	The application does not need to know the specific type of memory that exists on the platform or whether this memory is internal to the controller or externally connected to it.\n
+
+•	Memory stack can handle multiple external EEPROM devices along with the internal EEPROM.\n
+
+•	Memory Stack provides redundant storage of management data increases reliability of data access.\n
+
+•	Memory Stack provides Efficient and robust management of nonvolatile memories.\n
+
+•	Memory stack consists of the below modules:\n
+
+?	NvM (NVRAM Manager)\n
+?	MemIf (Memory Abstraction Interface)\n
+?	Ea (EEPROM Abstraction)\n
+?	Fee (Flash EEPROM Emulation)\n
+?	EEPROM Driver\n
+?	FLS (Flash Driver)
+
+•	The following block diagram show various software modules and device drivers associated with AUTOSAR Memory Stack:
+</string>
+    <string name="m13_1">•	The NvM module ensures data storage and maintenance of NV (nonvolatile) data according to the individual requirements in an automotive environment.
+
+•	The NvM module manages the NV data of an EEPROM and/or a FLASH EEPROM emulation device.\n
+
+•	It handles block management type of Native, Redundant and Dataset\n
+
+•	It provides CRC handling for data consistency\n
+
+•	Priority handling including immediate data write(crash data)\n
+
+•	Job queuing\n
+
+•	RAM block valid/modified handling\n
+
+•	ReadAll and WriteAll Support\n
+
+•	Block ID check
+</string>
+    <string name="m13_2">•	The Memory Abstraction Interface (MemIf) module facilitates abstraction from the underlying FEE and EA modules.\n
+
+•	MemIf (Memory Abstraction Interface) provides the interface that is used by the NvM to access NV memory devices.\n
+
+•	This ensures that the Non-Volatile Memory Manager (NvM) is independent of the driver interface layers of EEPROM (Eep) and Flash interface (Fls)\n
+
+•	MemIf is not responsible for calling main-functions of the underlying hardware abstraction modules. Calling main-functions cyclically has to be implemented in the BSW Scheduler.
+
+•	MemIf provides the status whether write functionality is completed/failed/pending etc.\n
+
+•	Multiple instances of EA and FEE can be used by the use of MEMIF module.
+</string>
+    <string name="m13_3">•	EA provides services for reading, writing, erasing data to/from an EEPROM.\n
+
+•	It also provides a service for comparing a data block in the EEPROM with a data block in the memory (e.g. RAM).\n
+
+•	The EA module operates on blocks provided by the NVRAM manager. Additional to NVM blocks the EA can handle/configure user blocks, e.g. for a boot loader application.\n
+
+•	Ea module facilitates abstraction from the addressing scheme of underlying EEPROM driver and hence provides a uniform addressing scheme.\n
+
+•	This ensures that the upper layer (NvM) need not be changed if the underlying EEPROM driver and device is replaced.\n
+
+•	The EA provides an interface for invalidating blocks provided by the NVM.\n
+
+•	The EA provides a header/trailer mechanism to manage each block’s information, whether this block is “correct” from the point of view of the EA.\n
+
+•	The EA supports usage of multiple EEPROM devices.\n
+
+•	The EA provides verification of data, which has been recently written to EEPROM. This feature can be configured block specifically.\n
+
+•	The EA provides detection and correction of single bit flips in a block’s management information.\n
+
+•	Redundant storage of management data for increased reliability of data access
+
+</string>
+    <string name="m13_4">•	The EEPROM driver provides services for reading, writing, erasing to/from an EEPROM.\n
+•	It also provides a service for comparing a data block in the EEPROM with a data block in the memory (e.g. RAM).\n
+
+•	A driver for an internal EEPROM accesses the microcontroller hardware directly and is located in the Microcontroller Abstraction Layer.\n
+
+•	A driver for an external EEPROM uses handlers (SPI in most cases) or drivers to access the external EEPROM device.\n
+
+•	The EEPROM driver does not provide mechanisms for providing data integrity\n
+
+•	The Eep module does not buffer jobs. The Eep module shall accept only one job at a time. During job processing, the Eep module shall accept no other job.\n
+
+•	The Eep module provide two different read/write modes: 1) Normal mode and 2) Fast Mode\n
+</string>
+    <string name="m13_5">•	The Flash EEPROM Emulation (FEE) abstracts from the device, a specific addressing scheme and segmentation.\n
+
+•	This provides the upper layers (NvM) with a virtual addressing scheme, segmentation as well as a virtually unlimited number of erase cycles.\n
+
+</string>
+    <string name="m13_6">Flash Driver Initializes Flash and reads/writes to Flash memory.
+    </string>
+    <string name="m13_7">Complex Driver
+A Complex Driver is a software entity not standardized by AUTOSAR that can access or be accessed via AUTOSAR Interfaces and/or Basic Software Modules APIs.
+The main goal of the CDD is to implement complex sensor evaluation and actuator control with direct access to the microcontroller.
+Example: Injection control, Electric valve control.
+</string>
+    <string name="m14_0">Communication stack is a software that is used to communicate between Application layers, to the external network, and vice versa. </string>
+    <string name="m14_2">COM service layer\n
+?	PDU Router (Service layer)\n
+?	CAN/ FR/ LIN/ Ethernet state manager (service layer)\n
+?	CAN/ FR/ LIN/ Ethernet Network manager(service layer)\n
+?	CAN/ FR/ LIN/Ethernet transport protocol (service layer)\n
+?	CAN/ FR/ LIN/ Ethernet Interface (ECU Abstraction layer)\n
+?	External CAN/ FR/ LIN/ Ethernet driver (ECU Abstraction layer)\n
+?	CAN/ FR/ LIN/ Ethernet Driver (MCAL Layer)\n
+
+5.3.2.2.1 Autosar COM:\n
+It is a module between RTE and PDU Router. It is responsible for providing signal level access to the application layer and PDU level access to the lower layers independent of protocol. It packs the signals to a PDU at the transmitter and unpacks the received PDU to provide a signal level access to the application at the receiver. At the PDU level, COM is responsible for grouping of the PDU’s, starting and stopping of the PDU groups.\n
+
+5.3.2.2.2 PDU (Protocol Data Unit) Router:\n
+This is a module responsible for routing the PDU to the respective Bus Specific Interface modules. Above the PduR module all the PDU’s are protocol independent and below PduR all the PDU’s are routed to the protocol specific modules.
+PduR is also responsible for PDU level gatewaying i.e. transmitting the received PDU from one Bus Specific Interface module to other Bus Specific Interface module. Gatewaying can also be done when a PDU is to be routed from one controller to another over the same protocol\n
+
+5.3.2.2.3 xxxTP: the basic services offered by the xxxtp module are segmentation of messages which have a payload of more than 8 bytes (CAN), transmission of messages with flow control and reassembling the segmented messages at receiver.\n
+
+5.3.2.2.4 xxxInterface: xxxinterface (xxxIF) is a module in ECU abstraction layer that is responsible for services like Transmit request, Transmit confirmation, reception indication and PDU mode controller\n
+
+5.3.2.2.5 xxxState Manager (xxxSm): this module shall implement the control flow of the respective bus. The xxxstate manager is a member of the communication service layer. It interacts with communication hardware abstraction layer and system service layer.\n
+
+5.3.2.2.6 Xxxx Nm: Its main purpose is to coordinate the transition between normal operation and bus-sleep mode of the network. The xxxnetwork management function provides adaption between network management interfaces (NmIf) and xxxinterface module.\n
+5.3.2.2.7 xxxdriver (xxxDrv): This module is a part of MCAl layer and provides hardware access to the upper layer services and a hardware-layer independent interface to the upper layers.
+
+
+
+
+</string>
+    <string name="m15_1">COM service layer\n
+?	PDU Router (Service layer)\n
+?	CAN/ FR/ LIN/ Ethernet state manager (service layer)\n
+?	CAN/ FR/ LIN/ Ethernet Network manager(service layer)\n
+?	CAN/ FR/ LIN/Ethernet transport protocol (service layer)\n
+?	CAN/ FR/ LIN/ Ethernet Interface (ECU Abstraction layer)\n
+?	External CAN/ FR/ LIN/ Ethernet driver (ECU Abstraction layer)\n
+?	CAN/ FR/ LIN/ Ethernet Driver (MCAL Layer)\n
+
+5.3.2.2.1 Autosar COM:\n
+It is a module between RTE and PDU Router. It is responsible for providing signal level access to the application layer and PDU level access to the lower layers independent of protocol. It packs the signals to a PDU at the transmitter and unpacks the received PDU to provide a signal level access to the application at the receiver. At the PDU level, COM is responsible for grouping of the PDU’s, starting and stopping of the PDU groups.\n
+
+5.3.2.2.2 PDU (Protocol Data Unit) Router:\n
+This is a module responsible for routing the PDU to the respective Bus Specific Interface modules. Above the PduR module all the PDU’s are protocol independent and below PduR all the PDU’s are routed to the protocol specific modules.\n
+PduR is also responsible for PDU level gatewaying i.e. transmitting the received PDU from one Bus Specific Interface module to other Bus Specific Interface module. Gatewaying can also be done when a PDU is to be routed from one controller to another over the same protocol\n
+
+5.3.2.2.3 xxxTP: the basic services offered by the xxxtp module are segmentation of messages which have a payload of more than 8 bytes (CAN), transmission of messages with flow control and reassembling the segmented messages at receiver.\n
+
+5.3.2.2.4 xxxInterface: xxxinterface (xxxIF) is a module in ECU abstraction layer that is responsible for services like Transmit request, Transmit confirmation, reception indication and PDU mode controller\n
+5.3.2.2.5 xxxState Manager (xxxSm): this module shall implement the control flow of the respective bus. The xxxstate manager is a member of the communication service layer. It interacts with communication hardware abstraction layer and system service layer.\n
+
+5.3.2.2.6 Xxxx Nm: Its main purpose is to coordinate the transition between normal operation and bus-sleep mode of the network. The xxxnetwork management function provides adaption between network management interfaces (NmIf) and xxxinterface module.\n
+5.3.2.2.7 xxxdriver (xxxDrv): This module is a part of MCAl layer and provides hardware access to the upper layer services and a hardware-layer independent interface to the upper layers.
+
+
+
+
+</string>
+    <string name="m16_0">DCM consists of three modules\n
+
+5.3.3.2.1 DSL (Diagnostic Session Layer)\n
+‘Diagnostic Session Layer’ ensures data flow concerning diagnostic requests, responses, manages diagnostic states, and provides the following functionalities,
+•	session handling\n
+•	Application layer timing handling\n
+•	Specific response behavior\n
+
+5.3.3.2.2 DSD (Diagnostic Service Dispatcher)\n
+‘Diagnostic Service Dispatcher’ processes a stream of diagnostic data\n
+•	Receives new diagnostic request over network and forwards it to data
+Processor.\n
+•	Transmits diagnostic response over network when triggered by data Processor.\n
+
+5.3.3.2.3 DSP (Diagnostic Service Processing)\n
+‘Diagnostic Service Processing’ handles the actual diagnostic service requests.\n
+•	Analyze the received requested message\n
+•	check format and whether the addressed sub function is supported.\n
+•	Acquire data or execute the required function call on the DEM, SW-Cs
+                        or other BSW modules\n
+•	Assemble the response\n
+Pictorial Representation of DCM Module in Autosar Architecture
+</string>
+    <string name="m17_0">5.4.1 Introduction\n
+
+AUTOSAR (AUTomotive Open System ARchitecture) is open and standardized automotive software architecture, jointly developed by automobile manufacturers, suppliers and tool developers worldwide.
+
+It is a layered architecture model which is  broadly classified into 3 layers.\n
+
+1. Application Layer\n
+2. BSW Layer\n
+3. RTE\n
+
+BSW Layer further subdivided into other layers and one of them is Service Layer. AUTOSAR OS is a part of system services.\n
+
+AUTOSAR OS is a statically configurable, pre-emptive, real-time operating system for use in high-performance, resource-constrained applications.\n
+
+AUTOSAR OS is an extension to the OSEK OS specification.\n
+
+OSEK is a European automotive industry standards effort to produce open systems interfaces for vehicle electronics.\n
+
+It was the predecessor of AUTOSAR OS.\n
+
+An AUTOSAR OS includes all the features of OSEK OS and adds some new functionality that is divided as Scalability Classes.
+</string>
+    <string name="m18_0">Scalability class refers to the capability of AUTOSAR OS in order to achieve more safety related features if the demand arises.
+
+It is divided into 4 categories.\n
+
+Scalability Class-1:\n
+•	Includes all features of OSEK OS +\n
+•	Schedule Table\n
+•	Stack Monitoring\n
+
+
+
+Scalability Class-2:\n
+•	All features of Scalability Class-1 +\n
+•	Timing Protection\n
+
+
+Scalability Class-3:\n
+•	All features of Scalability Class-2 +\n
+•	Memory Protection
+
+
+
+Scalability Class-4:\n
+•	All features of Scalability Class-3 +\n
+•	Timing Protection
+</string>
+
+
+    <string name="m19_0">A requirement for any system to perform different activities at the same time leads to concurrency. The way to deal with this problem in the operating system context is either by providing an individual processor for each concurrent activity or implementing context switching of different current activity on a single processor.
+
+So each concurrent activity in a real-time system is represented by task and context switching from one task to other is known as scheduling.
+
+In AUTOSAR OS terminology, a Task is the object that executes (user)code and is managed by the OS.\n
+
+There are two types of Tasks in AUTOSAR.\n
+
+Basic Task:\n
+•	A Task that cannot be block by itself.\n
+•	It cannot wait for OS events.\n
+•	It has 3 states Ready, Running, Suspended
+Extended Task:\n
+•	A Task that can be block by itself.\n
+•	It waits for OS events.\n
+•	It has 4 states Ready, Running, Suspended, Waiting
+</string>
+    <string name="m19_1">Running State: In the running state, the CPU is assigned to the task.\n
+
+
+Ready State: In this state the task only waits for allocation of the processor.\n
+The scheduler decides which ready task is executed next.\n
+
+Waiting State: In this state, the task cannot continue execution because it shall wait for at least one event.\n
+
+Suspended State: In this state, the task is in passive state and cannot be activated.\n
+
+Each Task has an attribute called priority by which the scheduler decides which is the next task to move from ready state to running state when there are multiple activated tasks in the queue.
+
+</string>
+    <string name="m19_2">A task can be activated multiple ways.\n
+
+•	Direct Activation:\n
+?	By calling ActivateTask(TaskID) API.\n
+•	Indirect Activation:\n
+?	Activation by an Alarm.\n
+?	Activation by a Schedule Table.
+
+</string>
+    <string name="m19_3">•	Priority:\n
+?	This is used by the scheduler to determine when the task runs.\n
+?	Priorities cannot be changed dynamically.\n
+?	Generally Zero is the lowest priority.\n
+?	Tasks can share priorities.\n
+•	Scheduling:\n
+?	Can be Fully-Preemptive or Non-Preemptive.\n
+•	Activations:\n
+?	The maximum number of task activations that can be queuedin the ready state.\n
+•	Autostart:\n
+?	This controls whether the task is started automatically when you start the OS.\n
+
+
+•	A Task can be terminated by calling the API TerminateTask ().\n
+
+•	TerminateTask () API forces the calling Task into Suspended State.
+
+</string>
+    <string name="m20_0">A Scheduling Policy enforces the rules to manage the concurrency smoothly.\n
+
+As per the AUTOSAR OS, a scheduling policy of a Task can be of the following:
+</string>
+    <string name="m20_1">Atask which is presently running may be rescheduled at any instruction by the occurrence of trigger conditions pre-set by the operating system.\n
+?	Put the running task into the ready state, as soon as a higherpriority task has got ready.\n
+?	The task context is saved so that the preempted task can be continued at the location where it was preempted.
+</string>
+    <string name="m20_2">Tasks that are declared as non-preemptivecannot be preempted by other tasks.\n
+?	We can prevent a task from being preempted by declaring it to be non-preemptable at configuration time.\n
+?	When a non-preemptive task moves to the running state it will run to completion and then terminate.\n
+?	Even if a task is non-preemptive, it can still be interrupted by ISRs.
+</string>
+    <string name="m21_0">•	Interrupts provide the interface between your application and the things that happen in the real-world.\n
+
+•	When an interrupt occurs, the processor usually looks at a predefined location in memory called a vector.\n
+
+•	A vector usually contains the address of the associated interrupt handler.\n
+
+•	AUTOSAR operating systems classify interrupts into two categories\n
+?	Category 1\n
+?	Category 2\n
+
+•	Category 1 Interrupts:\n
+?	They are the highest priority interrupts in the system.\n
+?	They do not interact with AUTOSAR OS.\n
+?	The handler executes at or above the priority level of the OS.\n
+•	Category 2 Interrupts:\n
+?	Priority is below highest, so these can be preemptable.\n
+?	They do interact with the OS services.\n
+?	The handler provided by an ISR is bound to the interrupt.\n
+?	Execution starts at the specified entry point of the ISR and continues until entry function returns.
+</string>
+    <string name="m22_0">•	Data and Hardware shared between Tasks and ISRs are not always reliable and safe.\n
+
+
+•	In a preemptive system, lack of mutual exclusion methods in order to access a resource can lead to Race Conditions.\n
+
+
+•	Locking mechanism is required in order to deal with a resource access during execution of the critical section of the software.\n
+
+
+•	AUTOSAR Os enforces a mechanism where Tasks and ISRs cannot get access to the same resource if it is already acquired by any other Task or ISR.\n
+
+
+•	AUTOSAR Os provides Priority Ceiling Protocol mechanism in order to avoid the problems of Priority Inversion and Deadlock.\n
+
+
+•	Resources can be configured in three ways in AUTOSAR OS.\n
+?	Standard Resource: These are normal OS Semaphores.\n
+?	Linked Resource: Alias to the standard resource so that nested locking of the same resource is possible.\n
+?	Internal Resource: These are the resources that are locked automatically on entry to a task and release automatically on termination.\n
+
+
+•	We can get the resource by GetResource () API call.\n
+\n
+•	We can release the resource by ReleaseResource () API call.
+
+•	Calls to GetResource () and ReleaseResource () must be match.\n
+We cannot get a resource that is already locked and cannot release a resource that has not already locked.\n
+
+•	All resources must be released before the Task or ISR terminates.
+</string>
+    <string name="m23_0">•	In an AUTOSAR OS system, events are used to send signal information to tasks.\n
+
+•	Events can be used to provide multiple synchronization points for extended tasks.\n
+
+•	An extended task can wait for an event, which causes the task to move intothe waiting state.\n
+
+•	When an event is set by a task or ISR in the system, the waiting task is transferred into the ready state.\n
+
+•	If we declare a task that waits onan event, it automatically means that it will be treated as an extended task.\n
+
+•	A task waits for an event using the WaitEvent (EventMask) API calls.\n
+
+•	Events are set using the SetEvent () API call.\n
+
+•	Events cannot be set for tasks that are in the suspended state.\n
+So, before setting the event, you must be sure that the task is not suspended.\n
+
+
+•	Alarms can be used to periodically activate extended tasks that don’t terminate.\n
+Each time the alarm expires, the event is set. The task waiting on theevent is then made ready to run.\n
+
+•	Each time the expiry point is processed, the event is set. The task waiting on the event is then made ready to run.\n
+
+•	An event can be set by any task or ISR, but it can only be cleared by the owner of the event.\n
+
+•	Events are cleared using the ClearEvent (EventMask) API call.\n
+
+•	When a task terminates all the events that it owns are cleared automatically.\n
+</string>
+    <string name="m24_0">•	An operating system object that registers how many things have happened in the OS in terms of ticks.\n
+
+
+•	A tick is an abstract unit. Itis up to the designer that what a tick could be.\n
+?	Time in millisecond, microsecond, minute and the counter then tells how much time has elapsed.\n
+?	Rotation, for example in degrees or minutes, in this case the counter tells how much something is rotated.\n
+?	Button presses, where the counter tells how many times the button has been pressed.\n
+?	Errors, where the counter tells how often an error has occurred.\n
+
+•	Counters can be driven by either Software or Hardware.\n
+
+•	Software Counters :\n
+?	The counter value is incremented by making the IncrementCounter () API call.\n
+?	These counters are maintained internally by the OS.\n
+
+•	Hardware Counters:\n
+?	The counter that is advanced by hardware (e.g. System Timer of MCU)\n
+?	The count value is maintained by the peripheral in Hardware.\n
+•	Counters are often used to calculate elapsed time between two events.\n
+
+•	Counters are also used to invoke callback routine for certain activity.\n
+•	These are the APIs are associated with Counter Os object in AUTOSAR.\n
+
+?	GetCounterValue ()\n
+?	GetElapsedValue ()\n
+?	IncrementCounter ()\n
+
+</string>
+    <string name="m25_0">•	Autosar OS provides a mechanism driven by counters to triggers certain actions, which calls Alarm.\n
+
+•	The associated actions are:-\n
+?	Activate a task\n
+?	Raise an Event\n
+?	Execute a Callback function\n
+?	Increment a Software Counter\n
+•	We can set multiple alarms on each counter.\n
+
+•	Alarms can be set to expire at an absolute or relative counter value.\n
+
+•	Alarms can be auto-started.\n
+
+•	The following APIS are associated with Alarms in AUTOSAR-OS.\n
+?	GetAlarmBase (AlarmType AlarmID, AlarmBaseRefType Info)\n
+?	GetAlarm (AlarmType AlarmID, TickRefType Tick)\n
+?	SetRelAlarm (AlarmType AlarmID, TickType Increment, TickType Cycle)\n
+?	SetAbsAlarm (AlarmType AlarmID, TickType Start, TickType Cycle)\n
+?	CancelAlarm (AlarmType AlarmID)\n
+</string>
+    <string name="m26_0">•	Schedule tables provide a way of planning a series of actions statically at configuration time.\n
+
+•	A schedule table is associated with exactly one AUTOSAR OS counter, may specify a duration, and contains one or more expiry points.\n
+
+•	Expiry points in RTA-OS are created implicitly by specifying offsets for stimuli implemented on a schedule table.\n
+
+•	You can switch between schedule tables, but only at the notional end of the table.\n
+
+•	Schedule tables can be synchronized with a global tick source using either:\n
+?	Implicit Synchronization\n
+?	Explicit synchronization\n
+•	Implicit Synchronization: where counter driving the schedule table is the global time source.\n
+•	Explicit synchronization: where counter driving the schedule table isticked by a local counter and the table is synchronized manually by telling the OS the current value of the global tick source.\n
+
+
+Some terminology associated with Schedule Table\n
+
+•	Initial Offset is the offset to the first expiry point on the schedule table.Itis therefore the smallest offset configured.\n
+
+•	Duration is the number of ticks from zero before the schedule table stops.\n
+
+•	Final Delay is the difference between the offset to the final expiry point and the duration.It is therefore equal to the value of duration minus thelongest offset.\n
+
+•	Delay is the number of ticks between adjacent expiry points and is equal to the longer offset minus the shorter offset. If the schedule table repeats,then the delay between the last and the first expiry point is equal to the FinalDelay plus the Initial Offset.\n
+
+•	Repeating defines whether the schedule table runs once each time it is started and then stops automatically, or whether it repeats until it is stopped using an OS API call.\n
+
+Following APIs are used to control Schedule Table in AUTOSAR-OS.\n
+
+•	StartScheduleTableRel (ScheduleTableID, Offset):\n
+Used to start ScheduleTable at a relative offset to the current time.\n
+
+•	StartScheduleTableAbs (ScheduleTableID, Start):\n
+Used to start ScheduleTable at an absolute time.\n
+
+•	StopScheduleTable (ScheduleTableID):\n
+Used to stop ScheduleTable immediately.\n
+
+•	NextScheduleTable (ScheduleTableID_From,  ScheduleTableID_To):\n
+Used to switch from one ScheduleTable to another after the first one has reached its end.\n
+
+•	GetScheduleTableStatus (ScheduleTableID,ScheduleStatus):\n
+Provides the state of the ScheduleTable.\n
+
+•	StartScheduleTableSynchron (ScheduleTableID):\n
+Starts an explicitly synchronized schedule table synchronously.As a result the schedule table enters the state SCHEDULETABLE_WAITING and waits for a synchronization count to be provided.\n
+
+•	SyncScheduleTable (ScheduleTableID, Value)\n
+Provides the schedule table with a synchronization count and starts the synchronization.\n
+
+•	SetScheduleTableAsync (ScheduleTableID)\n
+Used to stop the synchronization of a schedule table.\n
+</string>
+    <string name="m27_0">•	A Hook function is implemented by the user and invoked by the operating system in the case of certain incidents. In order to react to these on system or application level.\n
+
+•	There are two kinds of hook functions :-\n
+?	Application-Specific: Hook functions within the scope of an individual OS-Application.\n
+?	System-Specific: Hook functions within the scope of the complete system (in general provided by the integrator).\n
+
+
+Different Hooks provided by the AUTOSAR-OS are\n
+
+•	PreTaskHook: This hook is called before entry to the TASK execution.\n
+•	PostTaskHook: This hook is called immediately after the exit from TASK execution.\n
+•	ProtectionHook: The protection hook is always called if a serious error occurs. E.g. exceeding the worst case execution time or violating against the memory protection.\n
+•	StartupHook: The application specific startup hook is called during the start of the OS (after the user has started the OS via StartOS ()).\n
+•	 ShutdownHook: The application specific shutdown hook is called whenever the system starts the shutdown of itself.\n
+•	ErrorHook: The application specific error hook is called whenever a Task or Category 2 ISR which belongs to the OS-Application causes an error.\n
+
+</string>
+
+
+</resources>

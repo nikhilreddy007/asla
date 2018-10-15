@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1565C0</color>
+    <color name="colorPrimaryDark">#42A5F5</color>
+    <color name="backgroundcolor">#fcfcfc</color>
+
+    <!-- Colors used for home activity -->
+    <color name="lightgray">#ededed</color>
+    <color name="purple">#7c4dff</color>
+    <color name="yellow">#ffb300</color>
+    <color name="green">#00bfa5</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="blue">#23283a</color>
+    <color name="testcolorblue">#152b38</color>
+    <color name="pink">#fe104d</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Screens background color-->
+    <color name="bg_screen1">#f64c73</color>
+    <color name="bg_screen2">#20d2bb</color>
+    <color name="bg_screen3">#c873f4</color>
+    <color name="bg_screen4">#3395ff</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_inactive">#4c4c4c</color>
+
+    <!-- dots active colors -->
+    <color name="dot_active">#e5e5e5</color>
+</resources>

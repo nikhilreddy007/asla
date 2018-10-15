@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This is used for getting the list in the Articles-->
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:drawSelectorOnTop="true"
+    android:id="@+id/articles_list_view"
+    tools:context="com.example.nikhilreddy.ass.ArticlesActivity">
+</ListView>
