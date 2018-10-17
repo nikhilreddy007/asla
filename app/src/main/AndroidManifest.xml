@@ -16,18 +16,18 @@
         <!-- The Intro screen of the app -->
         <activity
             android:name=".WelcomeActivity"
-            android:theme="@style/IntroTheme"/>
+            android:theme="@style/IntroTheme" />
 
         <!-- The home page of the app -->
         <activity
             android:name=".MainActivity"
             android:label="ASLA"
-            android:theme="@style/AppTheme"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
 
         <!-- Parts of Tutorials -->
         <activity
-            android:name=".BeginnerTutorialActivity"
+            android:name=".TutorialActivity"
             android:label="Tutorial"
             android:parentActivityName=".MainActivity" />
 
@@ -67,7 +67,7 @@
         <activity
             android:name=".ZFActivity"
             android:label="Why ZF"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
 
         <!-- For showing why AUTOSAR -->
         <activity
@@ -76,8 +76,7 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".displayContent"
-            android:label="Tutorial"
-            android:parentActivityName=".BeginnerTutorialActivity" />
+            android:theme="@style/IntroTheme" />
         <activity
             android:name=".Splash"
             android:theme="@style/splash">
@@ -87,8 +86,84 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".questionsActivity"></activity>
+        <activity android:name=".questionsActivity" />
+        <activity
+            android:name=".Chap1Activity"
+            android:label="Basics"
+            android:parentActivityName=".TutorialActivity" />
+        <activity
+            android:name=".Chap2Activity"
+            android:label="BSW"
+            android:parentActivityName=".TutorialActivity" />
+        <activity
+            android:name=".Chap3Activity"
+            android:label="Com STACK"
+            android:parentActivityName=".TutorialActivity" />
+        <activity
+            android:name=".Chap4Activity"
+            android:label="OS"
+            android:parentActivityName=".TutorialActivity" />
+        <activity
+            android:name=".Chap5Activity"
+            android:label="RTE"
+            android:parentActivityName=".TutorialActivity" />
+        <activity
+            android:name=".Chap1_1Activity"
+            android:label="Fundamentals"
+            android:parentActivityName=".Chap1Activity" />
+        <activity
+            android:name=".Chap1_2Activity"
+            android:label="Architecture"
+            android:parentActivityName=".Chap1Activity" />
+        <activity
+            android:name=".Chap2_1Activity"
+            android:label="Diagnostics"
+            android:parentActivityName=".Chap2Activity" />
+        <activity
+            android:name=".Chap2_2Activity"
+            android:label="Mode Management"
+            android:parentActivityName=".Chap2Activity" />
+        <activity
+            android:name=".Chap2_3Activity"
+            android:label="Complex Device Drivers"
+            android:parentActivityName=".Chap2Activity" />
+        <activity
+            android:name=".Chap3_1Activity"
+            android:label="AUTOSAR BSW Fundamentals"
+            android:parentActivityName=".Chap3Activity" />
+        <activity
+            android:name=".Chap3_2Activity"
+            android:label="AUTOSAR COM Stack"
+            android:parentActivityName=".Chap3Activity" />
+        <activity
+            android:name=".Chap3_1_2Activity"
+            android:label="Sub-Layers"
+            android:parentActivityName=".Chap3_1Activity" />
+        <activity
+            android:name=".Chap3_2_5Activity"
+            android:label="FR/ CAN/ LIN Stack"
+            android:parentActivityName=".Chap3_2Activity" />
+        <activity
+            android:name=".Chap4_1Activity"
+            android:label="AUTOSAR Memory Stack"
+            android:parentActivityName=".Chap4Activity" />
+        <activity
+            android:name=".Chap4_2Activity"
+            android:label="AUTOSAR OS"
+            android:parentActivityName=".Chap4Activity" />
+        <activity
+            android:name=".Chap4_3Activity"
+            android:label="Measurement and Calibration"
+            android:parentActivityName=".Chap4Activity" />
+        <activity
+            android:name=".Chap4_2_2Activity"
+            android:label="Features of OS"
+            android:parentActivityName=".Chap4_2Activity" />
+        <activity
+            android:name=".Chap5_1Activity"
+            android:label="AUTOSAR RunTimeEnvironment (RTE)"
+            android:parentActivityName=".Chap5Activity" />
+        <activity android:name=".Chap5_2Activity"></activity>
     </application>
 
 </manifest>

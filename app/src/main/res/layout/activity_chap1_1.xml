@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.example.nikhilreddy.ass.MainActivity">
 
@@ -28,156 +29,62 @@
 
                 <!-- Tutorials card-->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/chap1Card"
+                    android:id="@+id/chap1_1_1Card"
                     android:layout_width="160dp"
                     android:layout_height="190dp"
                     android:layout_margin="10dp"
                     android:clickable="true"
                     android:focusable="true"
+                    app:cardElevation="0dp"
                     android:foreground="?android:attr/selectableItemBackground">
 
                     <LinearLayout
-                        android:id="@+id/tutoriallayout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
+                        android:background="@drawable/rounded_corners_purple"
                         android:orientation="vertical"
                         android:visibility="visible">
 
                         <TextView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
-                            android:gravity="center"
-                            android:background="@drawable/purple_resource_file"
-                            android:text="1"
-                            android:textColor="@color/white"
-                            android:textSize="32sp"
-                            android:textStyle="bold" />
-
-                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="Basics"
+                            android:layout_margin="10dp"
+                            android:textAlignment="center"
+                            android:text="What is AUTOSAR?"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
                 <!--Articles card-->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/chap2Card"
+                    android:id="@+id/chap1_1_2Card"
                     android:layout_width="160dp"
                     android:layout_height="190dp"
                     android:layout_margin="10dp"
                     android:clickable="true"
                     android:focusable="true"
+                    app:cardElevation="0dp"
                     android:foreground="?android:attr/selectableItemBackground">
 
                     <LinearLayout
-                        android:id="@+id/articleslayout"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
+                        android:background="@drawable/rounded_corners_purple"
                         android:orientation="vertical"
                         android:visibility="visible">
 
                         <TextView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
-                            android:gravity="center"
-                            android:background="@drawable/pink_resource_file"
-                            android:text="2"
-                            android:textColor="@color/white"
-                            android:textSize="32sp"
-                            android:textStyle="bold" />
-
-                        <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="BSW"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-            </LinearLayout>
-
-            <!-- FAQ and Quiz card-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_horizontal">
-
-                <!-- FAQ card-->
-                <android.support.v7.widget.CardView
-                    android:id="@+id/chap3Card"
-                    android:layout_width="160dp"
-                    android:layout_height="190dp"
-                    android:layout_margin="10dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
-
-                    <LinearLayout
-                        android:id="@+id/faqlayout"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:visibility="visible">
-
-                        <TextView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
-                            android:gravity="center"
-                            android:background="@drawable/green_resource_file"
-                            android:text="3"
+                            android:layout_margin="10dp"
+                            android:textAlignment="center"
+                            android:text="Why AUTOSAR?"
                             android:textColor="@color/white"
-                            android:textSize="32sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="Com STACK"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-                <!-- Quiz card-->
-                <android.support.v7.widget.CardView
-                    android:id="@+id/chap4Card"
-                    android:layout_width="160dp"
-                    android:layout_height="190dp"
-                    android:layout_margin="10dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
-
-                    <LinearLayout
-                        android:id="@+id/quizlayout"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:visibility="visible">
-
-                        <TextView
-                            android:layout_width="64dp"
-                            android:layout_height="64dp"
-                            android:gravity="center"
-                            android:background="@drawable/yellow_resource_file"
-                            android:text="4"
-                            android:textColor="@color/white"
-                            android:textSize="32sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="OS"
+                            android:textSize="16dp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -190,36 +97,164 @@
 
                 <!-- Tutorials card-->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/chap5Card"
+                    android:id="@+id/chap1_1_3Card"
                     android:layout_width="160dp"
                     android:layout_height="190dp"
                     android:layout_margin="10dp"
                     android:clickable="true"
                     android:focusable="true"
+                    app:cardElevation="0dp"
                     android:foreground="?android:attr/selectableItemBackground">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
+                        android:background="@drawable/rounded_corners_purple"
                         android:orientation="vertical"
                         android:visibility="visible">
 
                         <TextView
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textAlignment="center"
+                            android:text="Who is AUTOSAR?"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <!--Articles card-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/chap1_1_4Card"
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardElevation="0dp"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:gravity="center"
-                        android:background="@drawable/purple_resource_file"
-                        android:text="5"
-                        android:textColor="@color/white"
-                        android:textSize="32sp"
-                        android:textStyle="bold" />
+                        android:background="@drawable/rounded_corners_purple"                        android:orientation="vertical"
+                        android:visibility="visible">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="RTE"
+                            android:layout_margin="10dp"
+                            android:textAlignment="center"
+                            android:text="Objectives of AUTOSAR"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <!-- Tutorials card-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/chap1_1_5Card"
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardElevation="0dp"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@drawable/rounded_corners_purple"                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textAlignment="center"
+                            android:text="Key focus of AUTOSAR"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <!--Articles card-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/chap1_1_6Card"
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardElevation="0dp"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@drawable/rounded_corners_purple"                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textAlignment="center"
+                            android:text="AUTOSAR Roadmap"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <!-- Tutorials card-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/chap1_1_7Card"
+                    android:layout_width="160dp"
+                    android:layout_height="190dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardElevation="0dp"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@drawable/rounded_corners_purple"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textAlignment="center"
+                            android:text="Reach and Access AUTOSAR"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
