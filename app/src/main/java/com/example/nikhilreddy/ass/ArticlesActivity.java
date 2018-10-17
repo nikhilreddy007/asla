@@ -27,16 +27,16 @@ public class ArticlesActivity extends AppCompatActivity implements SearchView.On
 
         final ArrayList<Link> generalList = new ArrayList<>();
 
-        generalList.add(new Link(1,"Article   1","https://www.autosar.org/"));
-        generalList.add(new Link(2,"Article   2","https://www.autosar.org/"));
-        generalList.add(new Link(3,"Article   3","https://www.autosar.org/"));
-        generalList.add(new Link(4,"Article   4","https://www.autosar.org/"));
-        generalList.add(new Link(5,"Article   5","https://www.autosar.org/"));
-        generalList.add(new Link(6,"Article   6","https://www.autosar.org/"));
-        generalList.add(new Link(7,"Article   7","https://www.autosar.org/"));
-        generalList.add(new Link(8,"Article   8","https://www.autosar.org/"));
-        generalList.add(new Link(9,"Article   9","https://www.autosar.org/"));
-        generalList.add(new Link(10,"Article   10","https://www.autosar.org/"));
+        generalList.add(new Link(1,"Official Website","https://www.autosar.org/"));
+        generalList.add(new Link(2,"AUTOSAR Introduction","https://youtu.be/t9ajj5aCnZM"));
+        generalList.add(new Link(3,"AUTOSAR Overview","https://youtu.be/F27jtKkxbAo"));
+        generalList.add(new Link(4,"AUTOSAR Architecture","https://youtu.be/gDAvlw-FYZY"));
+        generalList.add(new Link(5,"Diagnostic Modules","https://youtu.be/slXtWnwI7P8"));
+        generalList.add(new Link(6,"Interview Questions","https://youtu.be/LdZIic1fIfc"));
+        generalList.add(new Link(7,"AUTOSAR COMM Stack","https://youtu.be/XEI9ZH3rRz8"));
+        generalList.add(new Link(8,"AUTOSAR CAN","https://youtu.be/s74lrGd5xf4"));
+        generalList.add(new Link(9,"AUTOSAR PDU's","https://youtu.be/uA0E4zXjkqI"));
+        generalList.add(new Link(10,"AUTOSAR OS","https://youtu.be/9GDX-IyZ_C8"));
 
         ListView listView = (ListView) findViewById(R.id.articles_list_view);
         ArticleAdapter articleAdapter = new ArticleAdapter(ArticlesActivity.this,generalList,R.color.white);
