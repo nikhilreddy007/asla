@@ -164,6 +164,469 @@ The communication happens thru ports those implements interfaces as per communic
 \n  - Standardizationsacross sub-layers, clusters, stacks and modules etc.
     </string>
 
+    <string name="_211_m1">Supports fault handling and reporting
+\n\nThe possible errors/ failures AUTOSAR addresses are
+\n  - Hardware errors
+\n  - System errors
+\n  - Software errors
+\n\nAddressing the errors
+\n  - Development stages
+\n    - Reported to DET module
+\n    - Feature can be switched OFF after development stage
+\n    - Optional feature can be switched ON/ OFF
+\n  - Production stages
+\n    - Reported to DEM module
+\n    - Feature shall be always ON to store and retrieve the permanent errors
+\n    - Errors can be retrieved thru external tools
+</string>
+    <string name="_212_m1">Provides services for Diagnostics
+\n\nInteracts over LIN/ CAN/ FR with external tools
+\n\nSupports LIN/ CAN/ FR communication
+\n\nInteracts with BSW directly, SWCs thru RTE to set/ get the data
+\n\nInteracts with fault memory
+\n\nHandles variety of diagnostic protocols</string>
+    <string name="_212_m4">DCM functionalities
+\n\nHandles diagnostic communication
+\n\nInteracts with application
+\n\nInteracts with ComM to handle communication states
+\n\nHandles tester presence service
+\n\nSecurity level handling
+\n\nManaging diagnostics sessions
+\n\nHandling various diagnostic protocols
+\n\nService response handling
+\n\nRealized as Ser vice SW-C</string>
+    <string name="_213_m1">Provides services to
+\n  - Process and access fault data
+\n  - Snapshots fault data at occurrence
+\n  - Accessto freeze frame data
+\n\nProvide fault data to DCM
+\n\nAccesses the NV memories to handle fault data
+\n\nEnable/ Disable fault logging
+\n\nFault reactions handled by FIM module
+\n\nRealized as Service SW-C</string>
+    <string name="_213_m2">More features of DEM
+\n\nEvent combination (Optional feature)
+\n\nPre-storage of Freeze frame data
+\n\nSupports extended data records
+\n\nDEM operation cycles
+\n\nNV memory access
+\n\nDe-bouncing algorithms for events
+\n  - Count er/ Time/ Frequency based
+\n    - DTC fault detection counter
+\n\nRealized as Ser vice SW-C</string>
+    <string name="_215_m1">BSW report the errors detected at development stages
+\n\nThe report collects
+\n  - Module occurred
+\n  - Function occurred
+\n  - Error classification
+\n\nThe functionality is implementation specific
+\n\nPossible use cases are
+\n  - Count ing the errors
+\n  - Log calls
+\n\nRealized as Ser vice SW-C
+</string>
+    <string name="_216_m1">Control the fault reaction functionalities
+\n\nFunctionalities check the inhibit conditions before executing
+\n\nEvent status information acts as inhibit conditions
+\n\nExample
+\n  – A sensor can have inhibit conditions. Upon failure, the functionality checks the inhibit condition and stops executing
+\n\nSupports summarized event
+\n\nRealized as Service SW-C
+</string>
+    <string name="_221_m1">ECU has states between power-up to shutdown
+\n\nStates on ECU, communication, network levels etc.
+\n\nFor smooth operation, these states has to be transitioned
+\n\nStates has to synchronize
+\n\nIn AUTOSAR we have
+\n  - ECU states: Managed by EcuM
+\n  - Wdg states: Managed by WdgM
+\n  - Communication states: Managed by ComM
+\n\nApplication shall have their states and logic
+</string>
+    <string name="_222_m1">First module to be initialized in AUTOSAR software
+\n\nInitializes the ECU state machine
+\n\nInitializes all the modules
+\n\nApplication need to request RUN/ SHUTDOWN states
+\n\nHandles sleep and wake-up functionalities
+\n\nPerforms wake-up validation
+\n\nHandles initialization and shutdown procedure thru state machine
+\n\nHandles various shutdown targets
+</string>
+    <string name="_222_m2">EcuM States
+\n\nEcuM initialization starts the state machine
+\n  - STARTUP states
+\n    - STARTUP I
+\n      - Start up state before OS started
+\n      - Modules independent of OS are initialized
+\n      - Fundamental needs for ECU (Mcu, Det etc.) are initialized
+\n    - STARTUP II
+\n      - Start up state after OS started
+\n      - Modules dependant on OSare initialized
+\n      - Modules with schedulable functions shall be initialized
+</string>
+    <string name="_222_m3">After STARTUP states, the state machine moves to
+\n  - RUN states
+\n    - RUN
+\n      - Execution of application tasks
+\n      - User has to request RUN state
+\n      - If valid RUN request, ECU stays in RUN state
+\n      - If no RUN request with in predefined t ime, moves to POSTRUN state
+\n      - State shall be left if user releases the request
+\n    - POSTRUN
+\n      - If user has any post activities, need to request POSTRUN before releasing RUN
+\n      - If RUN request, goes back to RUN state
+\n      - State shall be left if user releases the request
+\n      - If released, moves to SHUTDOWN state</string>
+    <string name="_222_m4">After RUN states, the state machine moves to
+\n  - SHUTDOWN states
+\n    - PREP SHUTDOWN
+\n      - Application is de-initialized
+\n      - No network
+\n      - If shutdown target is SLEEP, goes to GOSLEEP state else GOOFF I
+\n    - GO SLEEP
+\n      - Settings to made to go the sleep phase
+\n      - If valid wakeup, clear and enable the interrupts and moves to WAKEUP state
+\n      - Save NV data
+\n      - Enable wake-up sources
+\n      - Move Wdg state to SLEEP
+\n      - For data safety, the RAM integrity algorithms shall be created
+\n    - GOOFF I
+\n      - De-initialize all modules dependant on OS
+\n      - Set Wdg mode to shutdown
+\n      - Save NV data
+\n      - Set RESET as shutdown target, if any pending wakeup events found
+\n      - Shut down OS
+\n    - GOOFF II
+\n      - If Shut down target is RESET, Mcu performs RESET else SHUTDOWN
+</string>
+    <string name="_222_m5">SLEEP state
+\n  - SLEEP state achieved from GOSLEEP if there are no wake up events
+\n  - No code is executed in this state as micro is halted
+\n  - If any wakeup found on the way to SLEEP, moves to WAKEUP state
+\n  - Wakeup sources should be enabled in SLEEP state
+\n  - Upon a valid wakeup, WAKEUP state shall be achieved</string>
+    <string name="_222_m6">WAKEUP states
+\n  - WAKEUP I
+\n    - Restore MCU and Wdg states to normal
+\n    - Re-initialize the wakeup source drivers
+\n    - Actual wake source should set an wakeup event
+\n    - Disable wakeup sources
+\n    - Unlock the scheduler
+\n  - WAKEUP VALIDATION
+\n    - Validate the pending wakeup events
+\n    - Eliminate false wakeups
+\n  - WAKEUP REACTION
+\n    - Action to be taken on successful wakeup validation
+\n    - Move to RUN, Shut down state etc..are possibilities
+\n  - WAKEUP II
+\n    - Initialize the diagnostics
+\n    - Indicate the modes to RTE</string>
+    <string name="_222_m7">EcuM as a Service SW-C
+\n\nEcuM provides predefined ports to connect to application
+\n  - Release/ Request RUN state
+\n  - Release/ Request POST RUN state
+\n  - Select / get shutdown target
+\n  - Select / get application modes
+</string>
+    <string name="_222_m8">Configuration
+\n\nEcuM SWC description can be arrived with
+\n  - Port interfaces
+\n    - S/R interfaces for getting modes
+\n    - C/S interfaces for predefined ports
+\n  - Modes
+\n    - Mode ports and interfaces
+\n  - Data types
+\n    - Mode Declaration Gr oup with all ECU modes
+\n    - All types of EcuM
+\n  - Runnables
+\n    - All EcuM services
+\n    - EcuM services as server operations
+</string>
+    <string name="_223_m1">To supervise the reliability of software execution
+\n\nProvides alive-supervision of application
+\n\nTrigger the hardware Wdg
+\n\nCan supervise multiple entities
+\n\nTakes the decision on global supervision
+\n\nEach SE has to provide live indications to WdgM
+\n\nEcuM sync Wdg to ECU states
+</string>
+    <string name="_223_m2">Wdg Modes
+\n\nSupports different modes
+\n\nEach mode is defined by
+\n  - Set of active SEs and their alive supervision parameters
+\n  - Set of Wdgs to be tr iggered and their triggering parameters
+\n\nSource of activation for cyclic activities of WdgM
+\n\nConfigur able number of modes
+\n\nDifferent modes used for phases of ECU
+\n\nUpon errors, entry for DEM is available</string>
+    <string name="_224_m1">Contr ols BSW related to communication
+\n\nProcesses bus communication requests
+\n\nAbstract the communication hardware and software
+\n\nEnable/ Disable the communication signals/ messages
+\n\nHighest state results upon multiple requests from same user
+\n\nCover s FR, CAN and LIN buses
+\n\nManages Network and state managers
+\n\nManages bus errors
+\n\nRealized as Ser vice SWC</string>
+    <string name="_224_m2">Bus error management
+\n\nNetwork start indication for specific bus channel
+\n\nSwitch to FULL COM on this indication
+</string>
+    <string name="_231_m1">CDD – Complex Device Drivers
+\n\nThe devices with need of complex processing time
+\n\nStandard/ Non-standard from AUTOSAR
+\n\nNo need to follow any standard within CDDs but AUTOSAR way to outside software
+\n\nThe scaled AUTOSAR driver can also be a CDD
+\n\nA highly compact IP design/ algorithm software can fit as CDD
+\n\nNon-AUTOSAR communication drivers
+</string>
+    <string name="_232_m1">Interaction with in CDD is implementation specific
+\n\nInteraction from CDD to application is thru RTE
+\n\nNo abstraction layers between RTE, CDD and Hardware
+\n\nPossible to interact with BSW modules
+\n\nShall use OS for its schedulable entities
+\n\nEcuM shall initialize
+\n\nShall use OS for interrupts
+\n\nShall use SPI for external communication
+\n\nRealized as Ser vice SW-C
+</string>
+    <string name="_233_m1">Anything not available in AUTOSAR standards
+\n\nAnything complex – Complex Sensors and Actuators
+\n\nElectrical interfacing – Motor controls and actuators
+\n\nComplex algorithm processing – DSP processors for Camer a/ Radar etc.
+\n\nIP ASICs
+\n\nProtocols - I2C, IP protocols etc.
+\n\nCr ypto hardware services
+\n\nDEShardware services</string>
+    <string name="_234_m1">
+        Realized as Ser vice SWC
+\n\nSWC description can be made with below and imported in application
+\n  - CDD data types
+\n  - CDD APIs
+\n  - CDD schedulable functions
+\n  - CDD server operations
+\n  - PDAVs for CDD APIs
+\n  - Mode declaration groups etc.
+    </string>
+
+    <string name="_311_m1">Executes the functional part of application needs
+\n\nBSW offers
+\n  - Communication services
+\n  - Diagnosticsservices
+\n  - Calibration services
+\n  - Memory services
+\n  - Micro Controller services
+\n  - OSser vices
+\n  - Mode Management services
+\n  - Complex Device Drivers
+\n\nAccess to hardware
+\n\nAbstract application from hardware for more portability
+\n\nHardware independent BSW parts can be re-used completely
+</string>
+    <string name="_3120_m1">BSW has below main sub layers
+\n  - Service layer
+\n  - ECU Abstraction layer
+\n  - Complex Device Drivers (CDD)
+\n  - Micro Controller Abstraction Layer (MCAL)
+</string>
+    <string name="_3121_m1">Offer s basic services required for BSW and applications
+\n\nServices include
+\n  - System services
+\n  - Memory services
+\n  - Communication services</string>
+    <string name="_3122_m1">Abstracts ECU hardware
+\n\nAbstracts MCAL from Ser vice layer
+\n\nInterfaces external devices
+\n\nOffer s various abstraction services
+\n  - Onboar d device abstraction
+\n  - Memory hardware abstraction
+\n  - Communication hardware abstraction
+\n  - IO hardware abstraction
+</string>
+    <string name="_3123_m1">Enables to integrate special purpose functionality not specified in AUTOSAR
+\n\nSpecific devices with high timing constraints
+\n\nEnables a way for migration
+\n\nCDDs hardware access is abstraction free
+\n\nCDDs interact directly to RTE to less the latency</string>
+    <string name="_3124_m1">Lowest layer access to hardware
+\n\nAccess to micro controller peripherals, on-board modules
+\n  - Micro controller drivers
+\n  - Memory drivers
+\n  - Communication drivers
+\n  - IO drivers
+</string>
+    <string name="_321_m1">For Vehicle network communication, FR/ CAN/ LIN stacks available in AUTOSAR
+\n\nA stack of modules i.e. comm driver, abstraction module, Tp operation, routing, unpacking/ packing of signals etc. makes a complete COM Stack
+\n\nCOM managers (states, NM etc.), Calibration are also included to enhance
+</string>
+    <string name="_321_m2">A physical representation of a high numerical level data
+\n\nSignal types
+        \n\nHave a start position and initial value and updated to PDU directly
+\n\nGroup Signal
+\n  - A signal depending on other signals
+\n  - Data has to be updated in shadow fir st
+\n\nSignal group
+\n  - A set of group signals packed in a complex signal
+\n  -         May have 0…N group signals inside
+\n  - Data has to be updated to PDU from Shadow
+    </string>
+    <string name="_321_m3">PDU (Protocol Data Unit)
+\n  – A data unit packed with set of signals/ group signals
+\n  - PDU can’t have both signals and group signals at a time
+        \n\nPDU Group
+\n  - A group of zero or more PDUs or PDU groups
+\n  - A set of PDUs/ PDU Groups transmission/
+     reception can be controlled by specific PDU Group start/ stop
+\n  - Limited to 32 in an ECU
+</string>
+    <string name="_321_m4">All the PDUs info is available in EcuC
+\n\nModules access EcuC for PDU properties
+</string>
+    <string name="_322_m1">Top BSW module communicating to RTE
+\n\nProvides services to application thru RTE and rest of BSW COM Stack
+\n\nFunctionalities of COM module includes
+\n  - Signal and Message access
+\n  - Both Signal and Message access and Gat eways by COM
+\n  - Packing and un-packing of signals to/ from messages
+\n  - Deadline monitoring
+\n  - Filter based reception
+\n  - EndianNess handling
+\n  - Communication modes
+\n  - Signal transfer modes
+\n  - PDU Transmission modes
+\n  - Signal indication modes
+\n  - Immediate
+\n  - Deferred
+\n  - Communication transmission control (start/ stop of PDU groups)</string>
+    <string name="_322_m3">Applied at reception
+\n\nRemoves unwanted data and their processing
+        \n\nSupports signed types also. No support for complex types
+\n\nAlso used for Transmission Mode Selection (TMS)
+</string>
+    <string name="_322_m5">COM supports 2 modes for communication
+\n  - Modes for Signals (Transfer properties)
+\n  - TRIGGERED
+\n  - PENDING
+\n  - Modes for PDUs (Transmission modes)
+\n  - PERIODIC
+\n  - DIRECT/ N-TIMES
+\n  - MIXED
+\n  - NONE</string>
+    <string name="_322_m6">
+        Suppor ts for both interrupt and polling methods
+\n\n2 modes
+\n  - IMMEDIATE
+\n  - DEFERRED
+    </string>
+    <string name="_322_m7">Communication can be enabled/ disabled for specific PDUs
+\n\nPDUs can be logically grouped as groups and then controlled
+\n\nTransmission control by state managers thru COM
+\n\n2 levels of IPDU-Group depth allowed
+</string>
+    <string name="_323_m1">PduR Module placed between COM and FR/ CAN/ LIN Stack
+\n\nProvides interfaces to communication related modules
+\n\nFunctionalities of PduR module are
+\n\nRouting functionality
+\n  - Gateway functionality
+\n  - Minimum Routing capability
+\n  - Multi Cast operation
+\n  - Zero Cost operation</string>
+    <string name="_323_m3">Only predefined Pre-Compile and Link-time configurations possible
+\n\nNo routing tables
+\n\nOptional feature
+</string>
+    <string name="_323_m4">MultiCast Routing
+\n\nMultiCast Gatew ay Routing</string>
+    <string name="_323_m5">Eliminate PduR module actual functionality
+\n\nPduR hand shakes between upper and lower layers with zero latency
+\n\nPduR just maps the interfaces of source and destination modules
+</string>
+    <string name="_324_m1">Enables the multiplexing of PDUs
+\n\nPossible only with static configuration
+\n\nMultiplexed PDU will have Static and Dynamic parts
+\n\nStatic part will have layout as configured
+\n\nThe dynamic part may be multiplexed as configured and sent using same PDU Id</string>
+    <string name="_3250_m1">Deals with FR/ CAN/ LIN services
+\n\nA stack includes
+\n  - &lt;X&gt;Driver
+\n  - &lt;X&gt;Internal Driver
+\n  - &lt;X&gt;External Driver interfaced with SPI
+\n  - &lt;X&gt;If module
+\n  - LIN Tp is integrated with LIN If
+\n  - &lt;X&gt;Tp module
+\n  - No separate LIN Tp
+\n  - &lt;X&gt;Sm module
+\n  - &lt;X&gt;Nm module
+\n\nOver view of these modules are in next slides</string>
+    <string name="_3251_m3">Tp Operation
+\n\nSegments large data into PDU size
+\n\nRe-assemble segmented PDUs into large chunk
+\n\nMaintains a protocol with flow control
+\n\nTransmit cancellation
+\n\nUses Timer resources
+
+\n\nExample:
+\nPduR trying to send 50bytes
+</string>
+    <string name="_3251_m4">State Management
+\n\nHandles communication states
+\n\nAligns the transceiver modes based on application needs
+\n\nControl the PDU groups
+\n\nAnswers the bus errors (bus-off) by moving into safe states
+\n\nBased on requested communication mode, the transmission/ reception can be stopped and started
+\n\nHandles timeout for Deadline monitoring
+
+\n\n\n\nAbstraction modules
+\n\nAbstract CAN hardware
+\n\nControl the CAN driver and transceiver
+\n\nControl the external CAN hardware interface thru SPI
+\n\nHandles transmit confirmations
+\n\nHandles reception, bus-off and wake-up notifications
+\n\nConfigure software mailboxes with BASIC/ FULL fashion
+\n\nMultiple CAN driver support
+</string>
+    <string name="_3251_m5">Network Management
+\n\nCo-ordinate between network states
+\n\nRealized thru voting mechanism. Consolidation of ECUs votes on periodic basis results in taking the decision
+\n\nAble to detect all present nodes and nodes which are ready to sleep
+\n\nSupports bus-sleep and wake-up mechanisms
+\n\nPartial networking not supported
+\n\nHas the below modes
+\n  - Network mode
+\n  - Prepare Bus-Sleep mode
+\n  - Bus-Sleep mode</string>
+    <string name="_3252_m1">The respective HW (FR/ CAN/ LIN) has to be configured with
+\n  - Mailboxes
+\n  - HW filters
+\n  - ISR/ Polling based communication
+\n  - Transceiver configuration
+        \n\n\nMailboxes configuration
+\n\nCAN controller has predefined HW mailboxes
+\n\nEach mailbox associated with HW filter to pass through
+\n\n&lt;X&gt;If module can have SW mailboxes for the respective HW mailboxes
+\n\nHW mailboxes can be assigned in BASIC/ FULL CAN fashion
+</string>
+    <string name="_3252_m2">HW filters
+\n\n        Each HW mailbox associated with HW filter
+\n\nHW filter helps to send/ receive only filtered message with matching ID in FULL CAN
+\n\nIn BASIC CAN, a filter can allow messages with the range of IDs passed thru the filter
+       \n\n\n ISR/Polling based message access
+\n\nWith ISRs, the reception of data in HW mailbox is tr iggered with ISR
+\n\nIf indications/ notifications are configured, they will be tr iggered
+\n\nBus-Off and Wake-up processing can by done by ISR tr iggering
+\n\nWith Polling, CanIf has to poll for reception
+\n\nThe schedulable functions of CAN has to take care of the data and notifications
+</string>
+    <string name="_3252_m3">Transceiver configuration
+\n\nConver ts bus logical signals to physical signals
+\n\nAble to detect bus errors
+\n\nSleep, Wake-up etc. modes shall be configured
+\n\nIO pins used for transceiver shall be configurable
+\n\nAlways powered-on to detect the wake-ups
+</string>
+
+    
+
 
     <string name="a1">
         The interoperability of solutions requires a high quality standard. AUTOSAR has defined a process to ensure such high quality when changes are introduced in a revision or when new features are introduced in new minor or major releases.
@@ -187,7 +650,7 @@ The communication happens thru ports those implements interfaces as per communic
         The Adaptive Platform supports adaptive deployment of applications and interaction with Classic Platform and non-AUTOSAR systems. It targets high performance microcontrollers.
     </string>
     <string name="a4">
-        Updates and improvements of the standard will be introduced by future versions of AUTOSAR. Corrections are handled by a change management process and are provided as revisions of the existing releases. New features are matured in concepts which are introduced only in new releases. New minor releases accept only backward compatible features whereas major releases could introduce non backward compatible features. The AUTOSAR versions are numbered according to this scheme: &lt;major release&gt;.&lt;minor release&gt;.&lt;revision&gt;.
+        Updates and improvements of the standard will be introduced by future versions of AUTOSAR. Corrections are handled by a change management process and are provided as revisions of the existing releases. New features are matured in concepts which are introduced only in new releases. New minor releases accept only backward compatible features whereas major releases could introduce non backward compatible features. The AUTOSAR versions are numbered according to this scheme: andlt;major releaseandgt;.andlt;minor releaseandgt;.andlt;revisionandgt;.
         \n\n
         AUTOSAR’s standard Adaptive Platform makes use of agile development methods. That means functions and updates are developed in sprints. There is a regular release cycle to introduce those functions and updates into the market.
     </string>
