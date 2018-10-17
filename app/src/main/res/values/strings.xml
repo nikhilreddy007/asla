@@ -18,7 +18,7 @@
     <string name="next">NEXT</string>
     <string name="skip">SKIP</string>
     <string name="got_it">GOT IT</string>
-    
+
     <string name="_111_t">What is AUTOSAR?</string>
     <string name="_112_t">Why AUTOSAR?</string>
     <string name="_113_t">Who is AUTOSAR?</string>
@@ -85,6 +85,84 @@
     <string name="_511_t">Introduction</string>
     <string name="_512_t">RTE Concepts</string>
     <string name="_513_t">Calibration</string>
+
+    <string name="_111_m1">
+        AUTOSAR - AUTomotive Open System ARchitecture
+        \n\nConsortium found in 2002 by auto manufacturers later joined by suppliers and silicon chip providers
+        \n\nInitiative supported by auto industry to develop a de-facto open standard for automotive E/ E architectures
+        \n\nFocuses to specify standard architecture for system software
+        \n\nSoftware development based on function based approach
+        \n\nAims to improve performance, safety and environmental electronic systems
+    </string>
+    <string name="_112_m2">
+        To have a common requirements/ understanding between auto stake holders
+        \n\nCreate a standard core for industry on basic functions where innovative functions are built on top of it
+        \n\nHW and SW are widely independent. With parallel developments, reduces the development time and costs
+        \n\nRe-use of software increases at OEMs and suppliers. Improve the quality and efficiency
+        \n\nFaster development of auto software thru commercial design tools
+        \n\nSoftware integration from multiple vendors at ease
+    </string>
+    <string name="_113_m1">
+        AUTOSAR consortium consists of three members identified based on their initiatives
+\n\nThe members will be given appropriate rights and allocated to the various duties
+\n\nMembers of AUTOSAR
+\n  - Core partners
+\n  - Premium members
+\n  - Associate members
+\n\nSupport members of AUTOSAR
+\n  - Development members
+\n  - Attendees
+    </string>
+    <string name="_121_m5">
+        Follows ‘Component’ style
+\n\nInteraction between SW-Cs and to BSW thru RTE
+\n\nFollows the methodology to interact between SW-Cs
+\n\nSW-Cs shall be different types identified as on need basis
+\n\nEach SW-C has a part of functionality of an application
+    </string>
+    <string name="_121_m6">
+Acts as middle layer to abstract SW-Cs from BSW
+\n\nMakes application layer independent of BSW layer
+\n\nImplements communication mechanisms to interact within SW-Cs and between SW-C and BSW
+\n\nInternal behavior of all SW-Cs in ECU will be configured and implemented here
+    </string>
+    <string name="_121_m7">
+BSW has all the modules needed for application
+\n\nAUTOSAR defines the specifications for the all the modules and their integration
+\n\nHas modules to interact directly with hardware
+\n\nHas OS for scheduling purposes
+    </string>
+    <string name="_121_m8">
+The communication happens thru ports those implements interfaces as per communication mechanism
+\n\nEach SW-C will have ports to interact
+\n\nCommunication thru RTE
+\n\nThe communication in BSW is abstracted to the SW-Cs
+    </string>
+    <string name="_123_m1">
+        AUTOSAR supports 3 configuration classes
+\n\nPre-Compile time
+\n  - The software controlled by configuration at pre-compile time
+\n  - Need to re-make the software upon changes
+\n  - Support only parameters of Pre-Compile time
+\n\nLink-time
+\n  - The constant configuration data can be supplied as object code at link time (Warranty reasons, IP protection etc.)
+\n  - Need to re-link the software upon changes
+\n  - Support the parameters of Pre-Compile time and Link time
+\n\nPost-build time
+\n  - The constant configuration data can be supplied/ loaded at any time at known fixed entry point
+\n  - Load new configuration data at any time
+\n  - Support the parameters of all above
+    </string>
+    <string name="_124_m1">
+        Has 3 Conformance Classes
+\n  - ICC1
+\n  - ICC2
+\n  - ICC3
+        \n\nThe classes are based on
+\n  - AUTOSAR compliancy
+\n  - Standardizationsacross different layers
+\n  - Standardizationsacross sub-layers, clusters, stacks and modules etc.
+    </string>
 
 
     <string name="a1">
