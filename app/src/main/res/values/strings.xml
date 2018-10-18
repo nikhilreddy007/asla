@@ -63,7 +63,6 @@
     <string name="_414_t">MemIf module</string>
     <string name="_415_t">Flash/ Eeprom Stack</string>
     <string name="_421_t">Introduction</string>
-    <string name="_4220_t">Features of OS</string>
     <string name="_4221_t">Fundamentals of AUTOSAR OS</string>
     <string name="_4222_t">Extensions to and restrictions on OSEK OS</string>
     <string name="_4223_t">OS Tasks</string>
@@ -625,9 +624,670 @@ The communication happens thru ports those implements interfaces as per communic
 \n\nAlways powered-on to detect the wake-ups
 </string>
 
+    <string name="_411_m1">The Stack of modules for memory access
+\n\nFlash and Eeprom are available in AUTOSAR
+\n\nStack includes memory manager, abstraction and memories
+\n\nExternal memories can be interfaced with SPI
+\n\nProvides synchronous/ asynchronous services to memory access
+</string>
+    <string name="_411_m2">Types of memories
+\n\nThe Memory Stack deals with
+\n  - ROM
+\n  - RAM
+\n  - NV Memory (Flash/ Eeprom)
+\n\nROM memory exists in FLASH
+\n\nRAM memory as usual in RAM
+\n\nNV memory (Flash and Eeprom) divided into pages, blocks etc.
+\n\nFew differences are below
+</string>
+    <string name="_412_m1">Manages NV memories
+\n\nSynchronous and asynchronous services for handling NV data
+\n\nServices to read/ write all blocks  at once
+\n\nProtection facility for the NV layout
+\n\nUses abstraction to select the specific memory
+\n\nUses CRC module
+\n\nManages the memory as NV blocks</string>
+    <string name="_412_m2">Memory blocks
+\n\nMemory Stack deals with blocks
+\n  - ROM block
+\n  - RAM block
+\n  - NV block
+\n  - Administrative block
+\n\nROM block resides in Flash
+\n\nNV block resides in Flash/ Eeprom
+\n\nRAM and NV blocks shall have CRC (optional)
+\n\nAdministrative block reside in RAM having block index for dataset NV blocks
+
+\n\n\nTypes of memory blocks
+\n\n3 types of blocks
+\n  - Native block
+\n  - Redundant block
+\n  - Native block + Its redundant copy
+\n  - Dataset block
+\n  - N number of Native blocks arranged as arrays and accessed with index</string>
+    <string name="_412_m3">Block management types
+\n\nA single NVM block can associate with
+\n  - Its ROM block
+\n  - Its RAM block
+\n  - Its Administrative block
+        \n\nJob Processing
+\n\nSupports priority based job processing
+\n\nMaintains 2 queues
+\n  - Immediate Write jobs
+\n  - Rest of immediate read/ erase jobs
+\n\nImmediate write job has high priority</string>
+    <string name="_412_m4">Services for NV data access
+\n\nThree API configuration classes
+\n  - API configuration class 1
+\n  - Get error and Set block status
+\n  - ReadAll, WriteAll, CancelWr iteAll
+\n  - API configuration class 2
+\n  - Class 1 +
+\n  - Dataset block support
+\n  - Read block, Write block and Restoring block defaults
+\n  - API configuration class 3
+\n  - Class 2 +
+\n  - Block protection
+\n  - Erase and Invalidate the block</string>
+    <string name="_412_m5">Read block strategy
+\n\nROM defaults are read at the very first journey
+\n\nIf NV block data available,
+\n  - RAM mirror updated from native NV block
+\n  - RAM mirror updated from redundant block upon its native block read failure
+\n  - RAM mirror updated with ROM defaults
+\n\nIf invoked with a valid ptr, returns the ptr with NV block
+\n\nIf invoked with NULL, the NV data copied to its RAM block
+\n\nNotifications configurable for asynchronous read calls
+
+\n\n\nWrite block strategy
+\n\nIf any changes in RAM block data, updated to its NV block
+\n\nNo change in RAM block contents results no writing
+\n\nNotifications configurable for asynchronous write calls</string>
+    <string name="_412_m6">ReadAll blocks strategy
+\n\nReadAll blocks synchronously/ asynchronously
+\n\nHappens mostly at ECU start-up
+\n\nBlocks need to be configured for this feature
+\n\nThe data is loaded to their respective RAM mirrors
+\n\nIf corrupted/ errors
+\n  - Redundant block data are loaded
+\n  - ROM defaults are loaded
+\n\nNotification configurable for asynchronous calls
+
+\n\n\nWriteAll blocks strategy
+\n\nWriteAll blocks synchronously/ asynchronously
+\n\nHappens mostly at ECU shutdown
+\n\nBlocks need to be configured for this feature
+\n\nRAM mirrors are written back upon changes
+\n\nSupports aborting on-going WriteAll operation</string>
+    <string name="_412_m7">Configuration of NVRAM blocks
+\n\nConfigure NVRAM blocks as required
+\n\nEach NVRAM block has properties of
+\n  - CRCused
+\n  - Block management type
+\n  - Block length
+\n  - RAM and ROM blocks reference
+\n  - Select for ReadAll()
+\n  - Notification
+\n  - Target block reference
+\n\nEssential blocks to be configured
+\n  - Multi block
+\n  - Native block read/ written by ReadAll and WriteAll
+\n  - No RAM/ ROM reference
+\n  - No target reference
+\n  - Config ID block
+\n  - Redundant block holding ConfigID for NV memory layout
+\n  - Integrity check on flashed ConfigID vs configured CompiledConfigID while ReadAll()</string>
+    <string name="_412_m8">DatasetSelectionBits
+\n\nLSB bits used to index the datasets
+\n\nLSB bits used are from NvMBlockBaseNumber
+\n\nTargetBlockNumber = (NvMBlockBaseNumber &lt;&lt; DatasetSelectionBits)
+</string>
+    <string name="_413_m1">Application interacts with NVRAM thru RTE
+\n\nInteraction thru AUTOSAR interfaces thru RTE
+\n\nNotifications issued to SW-Cs for Async requests</string>
+    <string name="_413_m2">Configuration
+\n\nSW-C description has to be arrived with
+\n  - Data types
+\n  - NVRAM types, return values etc.
+\n  - Port s
+\n  - C/ Sservice ports
+\n  - Port interface
+\n  - C/ Sinterface
+\n  - NVRAM servicesas operations
+\n  - Internal Behavior
+\n  - RTE events
+\n  - Events for tr iggering
+\n  - Runnable entities
+\n  - NVRAM servicesas Runnable entities tr iggered concurrently</string>
+    <string name="_414_m1">Abstracts from lower memory layers
+\n\nDiverts NVRAM Manager requests to target blocks
+\n\nNo specific initialization
+\n\nServices to support/ abstract NVRAM services</string>
+    <string name="_415_m1">Abstracts physical memories to above layers
+\n\nPhysical addressing happens
+\n\nBlock number calculated as per NVRAM configuration
+\n\nPhysical Flash/ Eeprom layout configuration. Enables interrupts
+\n\nManages read/ write cycles
+\n\nServices to read/ write/ compare/ status blocks</string>
+    <string name="_415_m2">Notifications configured for Async requests
+\n\nConfigured for multi/ single blocks
+\n\nJob error/ end notifications possible
+</string>
+    <string name="_415_m3">External memory interfacing
+        \n\nPossibility of interfacing external Eeprom
+\n\nExt memories are interfaced thru SPI
+\n\nExt Eeprom driver available at Abstraction layer
+\n\nNeeds additional modules and configuration (DMA, GPIO pins for SPI etc.)
+</string>
+    <string name="_421_m1">The schedulable entities are scheduled by OS
+\n\nOS supports time, event based scheduling
+\n\nMostly OS is statically configured
+\n\nProvides protection schemes for safety and hw resources
+\n\nSupports Single/ Multi core OS
+\n\nHandles deadlines
+\n\nVector table to register interrupts
+\n\nSuppor ts multiple OS-Applications
+\n\nHook functions for tracing
+\n\nProvides services to work with basic OS objects
+\n\nSuppor ts Confor mance classes for different applications
+\n\nProvides standardized interfaces
+\n\nProvides different scalability classes and error checking</string>
+    <string name="_4221_m1">Fundamentals of AUTOSAR OS
+\n\nConfigur ed and scaled statically
+\n\nProvides different scheduling methods
+\n\nProtection features
+\n\nOSEK OS is the basis for AUTOSAR OS
+\n\nHandling interrupts and priorities
+\n\nSuppor ts schedulable tables for synchronization
+\n\nOS-Applications
+\n\nScalability classes
+\n\nHook functions for tracing
+\n\nError checking</string>
+    <string name="_4222_m1">Extensions to and restrictions on OSEK OS
+\n\nAUTOSAR OS doesn’t support internal communication
+\n\nPortability improvement with defined behavior
+\n\nExtended level of error checking
+\n\nStar tOS() shall not return
+\n\nDefined process of OS shutdown
+\n  - Disabling all the interrupts
+\n  - Entering into endless loop
+\n\nAvailability of interrupts at OS start and OS shutdown
+\n\nImproved the actions on Alarm expiry
+\n  - Incrementing the software counter
+\n\nDedicated service to increment the counters
+</string>
+    <string name="_4223_m1">OS Tasks
+\n\nApplication synchronizes by executing tasks
+\n\nScheduled entities by OS
+\n\nExecuted concurrently or asynchronously
+\n\nTasks has priority
+\n\nTasks triggered by alarms or scheduled expiry points
+\n\nMultiple activation of tasks possible
+\n\nOS Services available for scheduling
+\n\n2 Types
+\n  - Basic Task
+\n  - Have finite time of execution
+\n  - No waiting allowed
+\n  - Can have ‘n’ number of basic tasks for application synchronization
+\n  - Pre-emption based on priority</string>
+    <string name="_4223_m2">Extended tasks
+\n\nTasks may/ may not return
+\n\nCan wait forever
+\n\nOn waiting state, the processor switches to next priority task
+\n\nConsumes more resources
+</string>
+    <string name="_4224_m1">OS Counters
+\n\nRepresented as value incremented at constant speed
+\n\nMeasured as ‘ticks’
+\n\nLinks to Alarms and configures action on its expiry
+\n\nCan be hardware or software timer
+\n\nSer vice to operate on counters
+\n\nAt least one counter is needed
+\n\nConfigured statically
+\n\nCounter actions
+\n  - Triggering interrupts
+\n  - Triggering alarms etc.</string>
+    <string name="_4225_m1">OS Alarms
+\n\nFor time based tr iggering
+\n\nUses counters
+\n\nCan be AutoStar t
+\n\n2 types
+\n  - Cyclic
+\n  - Non-Cyclic
+\n\nAlarm actions
+\n  - Activate the tasks
+\n  - Set events
+\n  - Increment the counter
+\n  - Alarm call-back
+\n\nMultiple alarms can use same counter</string>
+    <string name="_4226_m1">OS Events
+\n\nConnecting synchronization points
+\n\nAvailable for extended tasks only
+\n\nApplication events possible to sync its logic
+\n\nServices offered to work with events directly
+\n\nEvents may occur on
+\n  - Expiry of t imer/ alarm
+\n  - Successful of transmission/ reception of signal/ message
+\n\nRules and restrictions
+\n  - All tasks can set the events
+\n  - The owner of task only clears/ wait for event. Exception for extended tasks
+\n  - ISR and Basic tasks can’t wait for event
+\n\nEvents are key to release from waiting state</string>
+    <string name="_4227_m1">OS Scheduler
+\n\nSchedules the tasks as per scheduling schemes
+\n\nThe tasks has to be activated to schedule them
+\n\nState transitions
+\n  - On activation, task moved to Ready state
+\n  - Priority and scheme resolved, task moved to Running state
+\n  - Waiting for event inside, task moved to Waiting state and schedule next priority task
+\n  - Higher priority task arrived, move existing task to Ready and new task to Running
+\n  - Event occurred in Waiting state, move the running and waiting tasks to Ready state
+\n  - Task terminated, task moved to Suspended state
+\n\nScheduler tr iggered either
+\n  - By alarm expiry
+\n  - Schedule table expiry points
+\n\nPossible to lock Scheduler
+\n\nServices to work with tasks and scheduler</string>
+    <string name="_4227_m2">Schedule table
+\n\nTable with predefined actions on expiry points
+\n\nStatically defined tables. Run-time switching between tables allowed
+\n\nCan be cyclic or non-cyclic
+\n\nUses counter to check expiry points
+\n\nExpiry points could be either absolute or relative to the counter
+\n\nPossible actions on expiry
+\n  - Set an event
+\n  - Activate a task directly</string>
+    <string name="_4228_m1">Schedule table synchronization
+\n\nSupports 2 methods
+\n  - Implicit
+\n  - Done with counter attached to it (FlexRay/ TTP)
+\n  - Explicit
+\n  - Done with synchronization counter (additional functionality by OS )
+\n  - Done by the user explicitly
+
+\n\n\nScheduling schemes
+\n\nProvides variety of scheduling schemes for OS applications
+\n\nThe main schemes are
+\n  - Full pre-emptive
+\n  - Non pre-emptive
+\n  - Mixed pre-emptive
+\n  - Etc.</string>
+    <string name="_4229_m1">ISRs and Types
+\n\nTriggered directly from hardware
+\n\nHighest priority than OS tasks
+\n\nNo waiting inside ISR
+\n\n2 types
+\n  - ISR Category1
+\n  - Should not use OS services
+\n  - Least overhead on scheduling
+\n  - Finitet ime execution
+\n  - ISR Category2
+\n  - Can use OS services
+\n  - Can maintain its own stack
+\n  - The pre-empted task shall resume once ISR completes</string>
+    <string name="_42210_m1">OS Resources
+\n\nShare resources with coordination
+\n\nShared between tasks and ISRs also
+\n\nWaiting not allowed after acquiring resource
+\n\nNo nesting of lock and unlock the resource with in the task/ ISR
+\n\nResources has to be managed to get r id of
+\n  - Deadlocks
+\n  - Priority inversion
+\n\nSolution for issues with Resources
+\n  - Priority Ceiling Protocol
+\n  - Scheduler
+\n\nTypes of Resources</string>
+    <string name="_42211_m1">OS Protection
+\n\nProtection for OS objects
+\n\nOS objects assigned to OS applications
+\n\nProtection types
+\n  - Memory Protection
+\n  - Code, Data and St ack of an OS application
+\n  - No sharing of memory objects across OSapplicat ions
+\n  - Timing Protection
+\n  - Occurs at deadline missing
+\n  - Execution budget of Tasks and Cat 2 ISRs
+\n  - Lock budget for resources of tasks and ISRs
+\n  - Inter-arrival t ime of tasks</string>
+    <string name="_42211_m2">\n\nService Protection
+\n  - OS Service calls corrupting OS itself
+\n  - Invalid handles
+\n  - Wrong contexts
+\n  - Wrong resource locking/ unlocking
+\n  - Unwanted calls/ access across OS applications
+\n\nHardware protection
+\n  - Highly useful in hardware mode (privileged/ non-privileged etc.)
+\n  - Protection for restricted hardware resources(peripherals, registers etc.) belonging to specific mode etc.
+\n  - Useful in non-trusted OS-Applications</string>
+    <string name="_42212_m1">OS Hook functions
+\n\nAllows user defined actions at specific OS occasions
+\n\nHelps to trace
+\n\nInvoked by OS itself
+\n\nHigher priority than tasks and ISRs
+\n\nFollows standardized interface
+\n\nHook functions available at
+\n  - System start-up
+\n  - System shutdown
+\n  - OSErrors
+\n  - OSProtection violations</string>
+    <string name="_42213_m1">Service to SchM
+\n\nSchM is BSW Schedule Manager
+\n\nHandles BSW schedulable functions
+\n\nProvides services to handle critical regions of BSW modules
+\n\nSupports to all BSW module instances
+\n\nTask scheduling done by OS
+</string>
+    <string name="_423_m1">Customize the OS
+</string>
+    <string name="_431_m1">Access the ECU memory after deployment
+\n\nMeasurement reads the data
+\n\nCalibration reads and edits the data
+\n\nFine tune the data by calibrating to study application behavior
+\n\nChange the calibration data from external device
+\n\nJust by changing the calibrated data, the same software can be re-used to multiple vehicle variants/ platforms
+\n\nXCP facilitates all the above</string>
+    <string name="_432_m1">Protocol between a master and slave device
+\n\nBased on ASAM standards
+\n\nProvides
+\n  - Access the data synchronously/ asynchronously
+\n  - Data stimulation (for rapid prototyping)
+\n  - On-line memory calibration
+\n  - Flash programming
+\n  - FR/ CAN buses supported
+\n  - More optional features
+\n  - Available from AUTOSAR R4.x onwards</string>
+    <string name="_433_m1">FR and CAN buses are supported
+\n\nXCP messages sent/ received as per ASAM format
+\n\nCoding and De-coding of message done be respective Master and Salve
+\n\nXCP thru CAN
+\n  - XCP PDUs communication thru AUTOSAR CAN St ack
+\n  - 2 dedicated CAN IDs (Each one for Tx, Rx) need to be configured for XCP
+\n  - Messages decoded/ encoded by CCP module
+\n\nXCP thru FR
+\n  - XCP PDUs communication thru AUTOSAR FR St ack
+\n  - XCP messages on FR shall be event driven
+\n  - Multiple PDUs can be packed and sent in a single FR PDU</string>
+
+    <string name="_511_m1">Abstracts BSW from application
+\n\nAllows parallel SW development
+\n\nCompletely auto-generated for specific ECU
+\n\nVFB realized thru implementation of RTE
+\n\nProvides services to SW-Cs and to BSW to access the data/ services
+\n\nProvides data integrity and consistency mechanisms
+\n\nRunnables are scheduled by OS
+\n\nRTE events to synchronize the application needs
+\n\nCommunication with in Runnables
+\n\nImplements VFB TRACE
+</string>
+    <string name="_512_m1">Software Components
+\n\nLocated above RTE
+\n\nFollows component style methodology
+\n\nRTE implements the interaction for SW-Cs
+\n\nSW-C is location independent, instantiated and highly re-usable
+\n\nSW-C description linked with RTE features
+
+\n\n\nCompositions
+\n\nGgroup of SW-Cs interconnected
+\n\nDelegation connectors used to connect to outside SW-Cs
+\n\nIs of SW-C type and can use all features of an atomic SW-C
+\n\nCommunication possible with in composition
+        \n\n\nCommunication paradigms
+\n\nProvides communication schemes for SWCs
+\n\nThe schemes communicate thru ports
+\n\nFor inter-communication, RTE uses COM
+\n\nFor intra-communication, RTE may use COM or implements on its own
+\n\nSchemes based on communication via data/ services
+\n\n2 Schemes for Inter-SWC and to BSW
+\n  - Sender -Receiver (S/ R)
+\n  - Client -Ser ver (C/ S)
+\n\nScheme for Intra-SWC
+\n  - Inter-Runnable communication
+        \n\n\nSender-Receiver communication
+\n\nTransport of data from Sender to Receiver
+\n\nSingle S/ R interface shall have many data elements. But data element transport will happen as per the contract with respective ports
+\n\nOne way communication. No acknowledgement
+\n\nFiltering allowed on RTE level
+\n\nWith LIFO fashion, both 1:N, N:1 are allowed
+\n\nWith FIFO and queued fashion, both 1:N, N:1 are allowed
+\n\nFor modes communication, its only 1:N is allowed
+</string>
+    <string name="_512_m2">Client-Server communication
+        \nClient requests for Ser ver’s services
+\n\nSW-C can be a Client and Ser ver
+\n\nA Client shall have multiple Ser vers
+\n\nClient types
+\n  - Synchr onous clients
+\n  - Asynchronous clients
+\n\nOnly N:1 is allowed
+\n\nC/S interface shall have ‘n’ number of operations. Server offers the service based as per the contract with respective ports
+\n\nServer shall address serialization
+\n\nTwo way communication
+\n\nSupports both LIFO and FIFO fashions
+\n\nUsed for accessing Service SW-Cs
+</string>
+    <string name="_512_m3">Inter-Runnable communication
+\n\nThe local data of Runnable is abstracted with others
+\n\nThe data can’t be shared directly
+\n\nRTE provides services to transport the data between Runnables
+\n\nAllowed for multiple instantiation also
+\n\nSer vices to read and write the inter-runnable variables
+\n\nThis communication doesn’t need
+\n  – Ports and Interfaces
+</string>
+    <string name="_512_m4">Runnable entities
+\n\nThe atomic SW-C is divided into small executables ‘Runnables’
+\n\nRunnables use RTE and OS services
+\n\nActivated by RTE thru RTE events
+\n\nServer runnables doesn’t need activation if invoked concurrently. No OS Task mapping in this case
+\n\nRunnables are mapped to OS Tasks</string>
+    <string name="_512_m5">Runnable entity types
+\n\nCategorized based on its severity
+\n\n3 runnable types
+</string>
+    <string name="_512_m6">Data accessing methods for Runnable entities
+\n\nRunnables access the data thru accessing methods
+\n\nAccessing methods related to communication schemes
+\n\nQueuing always be on receiver side
+\n\nCommunication schemes
+\n  – Sender / Receiver
+\n  – Implicit access
+\n  – The updated data received automatically when Runnable starts
+\n  – The data updated is shared to other Runnables at the earliest of its termination
+\n  – Only non-blocking access
+\n  – Explicit access
+\n  – Runnable sends/ receives the data elements explicitly
+\n  – Based on Runnable types, the access could be blocking or non-blocking
+\n  – Client / Ser ver
+\n  – Synchronous access
+\n  – Blocking until Ser ver finishes the operation
+\n  – Asynchronous access
+\n  – Non-blocking Client . Ser ver notifies the completenessof operation
+</string>
+    <string name="_512_m8">RTE Events
+\n\nTo wait and resolve the dependencies
+\n\nTypes of Events
+\n  - Timing event (T)
+\n  - DataReceivedEvent (DR)
+\n  - DatareceiveError Event (DRE)
+\n  - DataSendCompleteEvent (DSC)
+\n  - OperationInvokedEvent (OI)
+\n  - AsynchronousSer ver CallRetur nsEvent (ASCR)
+\n  - ModeSw ithEvent (MS)
+\n\n\nRunnable entities and RTE Events
+\n\nRunnable entities are activated by RTE events
+\n\nAll events are associated with Runnables
+\n\nRelease the runnables from WaitPoints
+</string>
+    <string name="_512_m9">Mapping Data Elements to Signals
+\n\nIntra-communication of data handled by RTE
+\n\nInter-communication of data is handled by COM
+\n\nData elements are mapped to COM signals
+\n\nSimple data elements mapped to a normal COM signal
+\n\nComplex data elements mapped to Signal groups
+</string>
+    <string name="_512_m10">AUTOSAR Services
+\n\nDeals with AUTOSAR Ser vice modules
+\n\nApplication interacts with BSW services
+\n\nInteraction thru Ser vice ports
+\n\nStandar dized AUTOSAR interfaces shall be used
+\n\nC/ Sinterface is used
+\n\nService BSW modules are
+\n  - NvM
+\n  - WdgM
+\n  - ComM
+\n  - EcuM
+\n  - DET and DEM
+\n  - DCM and FIM
+\n  - GPT
+\n\nSW-C description for the above modules shall be made and available to SW-Cs
+\n\nService APIs invoked as simple Cfunctions leaving no overhead
+        \n\n\nService port mapping
+\n\nService ports on both SW-C and Ser vice module
+\n\nShall follow C/ Scommunication
+\n\nThe mapping may be done with a simple Cbasics
+</string>
+    <string name="_512_m11">Port Defined Argument Values
+\n\nHow to have unique Ids thru out ECU software?
+\n\nHow does SW-Cs know about DEM Fault/ NvM Block Ids?
+\n\nHard code the Ids thru Client ports. Ids appended as arguments
+</string>
+    <string name="_512_m12">Exclusive areas
+\n\nGuarantee data consistency
+\n\nGuard the data against concurrent accesses
+\n\nMechanisms used are
+\n  - Sequential scheduling strategy
+\n  - Interrupt blocking strategy
+\n  - Usage of OSr esources
+\n  - Task blocking strategy
+\n  - Cooper ative Runnable placement strategy
+\n  - Etc.
+\n\nServices to access the cr itical sections of data
+\n  - Rte_Enter
+\n  - Rte_Exit
+        \n\n\nModes
+\n\nStart/ Stop runnables on entering/ exiting the modes
+\n\nSW-C user of these modes are called mode user
+\n\nChanges of modes notified to the mode user by the respective mode manager
+\n\nMode user gets mode switch notifications upon changes
+</string>
+    <string name="_512_m13">Mode ports and interface
+\n\nMode managers in AUTOSAR
+\n  - ComM
+\n  - WdgM
+\n  - EcuM
+\n\nNeed Ser vice mode ports to avail this feature
+\n\nAssociated with ModeSw itchEvents
+\n\nMode switch shall be synchronous/ asynchronous
+\n\nMode Sw itch Interface supports only 1:N communication
+\n\n\nVFB Trace
+\n\nTrace the data with user defined functions
+\n\nTemplates auto generated but functions has to be defined by user
+\n\nRTE services are configurable for hook functions
+\n\nSwitch ON/ OFF facility for tracing
+\n\nTrace is also possible for Runnables
+\n\nCOM signals can also be monitored on VFB
+\n\nOS is also traceable
+\n\n\nRTE Generation phases
+\n\nRTE is completely auto generated
+\n\nTwo phases available for different project life cycle
+\n\nPhases
+\n  - Contract Phase
+\n  - Generation of SW-C header templates only
+\n  - General RTE types file
+\n  - Only SW-C description is needed
+</string>
+    <string name="_512_m14">Generation Phase
+\n\nComplete ECU description files needed
+\n\nComplete generation of RTE
+\n\nRelationships with BSW modules are also generated
+</string>
+    <string name="_512_m15">RTE Source and Header files
+\n\nRTE generation produces output files
+\n  - Rte_&lt;SW-C&gt;.h
+\n  - RTE API mapping
+\n  - Declaration of Runnables, RTE APIs
+\n  - Initial values
+\n  - Rte-Type.h
+\n  - Types of RTE needs and user defines types
+\n  - Limits of all types
+\n  - Rte_Cbk.h
+\n  - COM call-back declarations
+\n  - Rte_Cfg.h
+\n  - User definitions affecting the behavior of generated RTE
+\n  - Ex: Enable/ Disable VFB TRACE etc.
+</string>
+    <string name="_512_m16">Rte_Hook.h
+\n  - Declarations of hook functions for Tracing
+\n\nRte_Main.h
+\n  - Declarations of Rte_St art and Rte_St op functions
+\n\nRte.h
+\n  - Fixed elements of RTE
+\n\nRte.c
+\n  - RTE service definitions
+\n  - Definitions of OS tasks
+\n  - Definition of COM call-backs
+\n  - Definition of RAM variables for RTE
+\n  - Rte_St art and Rte_St op definitions
+\n  - Etc.
+</string>
+    <string name="_513_m1">Calibration
+\n\nAdjust ECU SW to fit into specific vehicle needs
+\n\nDifferent mechanisms are provided
+\n\nMechanisms are
+\n  - Measurement
+\n  - Measure what’s going on in the ECU
+\n  - Tools available to monitor the data
+\n  - Calibr ation
+\n  - Based on measurement data, data shall be modified
+\n  - Modify and fine tune the data suitable for specific project needs</string>
+    <string name="_513_m2">Offline and Online Calibration
+\n\nMethods based on how the calibration data is changed
+\n\nTypes
+\n  - Offline
+\n  - Calibration data re-flashed while ECU is offline
+\n  - Online
+\n  - Calibration data modified while at ECU is online
+\n  - The calibration data is updated at runtime by external tester
+\n  - The new data written in to ECU at shutdown t ime</string>
+    <string name="_513_m3">Per-Instance Memory
+\n\nA specific memory needed for a specific SW-C instance
+\n\nStatically defined memory parts
+\n\nRTE service Rte_Pim to access the specific memory part of that instance
+\n\nMemory can be accessed by Runnables of that SW-C instance
+\n\nThis memory is not sharable across other SW-Cs
+</string>
+    <string name="_513_m4">Calibration parameters
+\n\nDesign Calibr ation parameters in AUTOSAR
+\n  - Design as Calibr ation SW-Cs
+\n  - Only have PPorts of type Cal-Pr m
+\n  - Uses Cal-Pr m interface
+\n  - Just provides the Cal-Pr m data to other SW-Cs
+\n  - Can’t have runnables, events etc…No internal behavior
+\n  - Accessthe Cal-Pr m data thru Rte_CalPr m service
+</string>
+    <string name="_513_m5">Internal Calibration parameters with in SW-Cs
+\n\nDefined in SW-C description
+\n\nCan be only used with in SW-C
+\n\nTwo types
+\n  - Per-Instance
+\n  - Separate for each instance of SW-C
+\n  - Shared
+\n  - Shared across all instances of SW-C
+\n\nRTE provides Rte_CDat a service to access the data</string>
+    <string name="_513_m6">Calibration methods
+\n\nTwo types of calibration
+\n  - Offline calibration
+\n  - No changes to calibration parameters at run t ime
+\n  - All calibration parametersare read from ROM directly
+\n  - Re-flashed in ROM directly
+\n  - RTE just shares the info by reading from ROM
+\n  - Online calibration
+\n  - RTE allocates RAM to these calibration parameters
+\n  - Changes to parameters at runtime thru external tools
+\n  - The latest data written back to ECU at shutdown
+\n  - The new data shall be read from next journey onwards</string>
+
     
-
-
     <string name="a1">
         The interoperability of solutions requires a high quality standard. AUTOSAR has defined a process to ensure such high quality when changes are introduced in a revision or when new features are introduced in new minor or major releases.
         \n\n

@@ -13,7 +13,6 @@ public class Chap4_2_2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chap4_2_2);
 
-        final CardView chap4_2_2_0Card = (CardView) findViewById(R.id.chap4_2_2_0Card);
         final CardView chap4_2_2_1Card = (CardView) findViewById(R.id.chap4_2_2_1Card);
         final CardView chap4_2_2_2Card = (CardView) findViewById(R.id.chap4_2_2_2Card);
         final CardView chap4_2_2_3Card = (CardView) findViewById(R.id.chap4_2_2_3Card);
@@ -28,13 +27,6 @@ public class Chap4_2_2Activity extends AppCompatActivity {
         final CardView chap4_2_2_12Card = (CardView) findViewById(R.id.chap4_2_2_12Card);
         final CardView chap4_2_2_13Card = (CardView) findViewById(R.id.chap4_2_2_13Card);
 
-        chap4_2_2_0Card.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                final Intent display_intent = new Intent(Chap4_2_2Activity.this, displayContent.class);
-                display_intent.putExtra("topic",4_2_2_0);
-                startActivity(display_intent);
-            }
-        });
         chap4_2_2_1Card.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 final Intent display_intent = new Intent(Chap4_2_2Activity.this, displayContent.class);
