@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ViewPager mPager;
     private int currentPage = 0;
-    private final Integer[] XMEN= {R.drawable.autosar,R.drawable.programmers_fact,R.drawable.formats,R.drawable.zf};
+    private final Integer[] XMEN= {R.drawable.zflogo,R.drawable.zfceo,R.drawable.zffounder,R.drawable.autosarlogo};
     private ArrayList<Integer> XMENArray = new ArrayList<>();
 
     @Override
