@@ -78,19 +78,6 @@ public class FaqActivity extends AppCompatActivity implements SearchView.OnQuery
             public void onGroupCollapse(int groupPosition) {
             }
         });
-
-        expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-            @Override
-            public boolean onChildClick(ExpandableListView parent, View v,
-                                        int groupPosition, int childPosition, long id) {
-                final Intent disp_content = new Intent(FaqActivity.this, displayContent.class);
-                disp_content.putExtra("chapter",groupPosition);
-                disp_content.putExtra("topic",childPosition);
-                startActivity(disp_content);
-                return true;
-            }
-        });
-
     }
 
     @Override
