@@ -5,16 +5,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_screen1"
     tools:context=".ZFActivity">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
+        android:layout_height="wrap_content"
         android:text="Why ZF"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:padding="10sp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="ZF is a global leader in driveline and chassis technology as well as active and passive safety technology. The company has a global workforce of 146,000 with approximately 230 locations in some 40 countries. In 2017, ZF achieved sales of €36.4 billion and as such, is one of the largest automotive suppliers worldwide.\n\nZF enables vehicles to see, think and act. The company invests more than six percent of its sales in research and development annually – in particular for the development of efficient and electric drivelines and also in striving for a world without accidents. With its broad portfolio, ZF is advancing mobility and services for passenger cars, commercial vehicles and industrial technology applications."
         android:textColor="#000000"
         android:textStyle="bold"
-        android:textSize="48sp"
-        android:background="@color/green"/>
+        android:textSize="18sp"
+        android:padding="10dp"/>
 
 </LinearLayout>
