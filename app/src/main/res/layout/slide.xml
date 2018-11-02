@@ -11,5 +11,5 @@
         android:layout_height="200dp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/programmers_fact" />
+        android:src="@drawable/zflogo" />
 </FrameLayout>
