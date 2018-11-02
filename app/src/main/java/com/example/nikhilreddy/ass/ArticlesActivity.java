@@ -18,7 +18,7 @@ import java.util.ArrayList;
 /**
  * it is used for arcticles
  */
-public class ArticlesActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
+public class ArticlesActivity extends AppCompatActivity /*implements SearchView.OnQueryTextListener*/ {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,28 +52,28 @@ public class ArticlesActivity extends AppCompatActivity implements SearchView.On
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_search, menu);
-
-        MenuItem searchItem = menu.findItem(R.id.search);
-        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-        searchView.setOnQueryTextListener(this);
-
-        return true;
-    }
-
-    @Override
-    public boolean onQueryTextSubmit(String query) {
-        // User pressed the search button
-        return false;
-    }
-
-    @Override
-    public boolean onQueryTextChange(String newText) {
-        // User changed the text
-        return false;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.menu_search, menu);
+//
+//        MenuItem searchItem = menu.findItem(R.id.search);
+//        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+//        searchView.setOnQueryTextListener(this);
+//
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onQueryTextSubmit(String query) {
+//        // User pressed the search button
+//        return false;
+//    }
+//
+//    @Override
+//    public boolean onQueryTextChange(String newText) {
+//        // User changed the text
+//        return false;
+//    }
 
     /**
      * it is used for opening the web page in the articles

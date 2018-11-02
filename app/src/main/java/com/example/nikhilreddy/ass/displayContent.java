@@ -1,14 +1,22 @@
 package com.example.nikhilreddy.ass;
 
+import android.content.Context;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.GestureDetector;
+import android.view.LayoutInflater;
+import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class displayContent extends AppCompatActivity {
+
+    private float mScale = 1f;
+    private ScaleGestureDetector mScaleDetector;
+    GestureDetector gestureDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -258,6 +266,5 @@ public class displayContent extends AppCompatActivity {
                 image16.setVisibility(View.VISIBLE);
             }
         }
-            
     }
 }

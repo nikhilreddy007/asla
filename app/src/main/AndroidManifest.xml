@@ -34,7 +34,7 @@
         <!-- Parts of Quiz -->
         <activity
             android:name=".EasyQuizActivity"
-            android:label="Easy"
+            android:label="Quiz"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MediumQuizActivity"
@@ -162,7 +162,8 @@
         <activity
             android:name=".Chap5_1Activity"
             android:label="AUTOSAR RunTimeEnvironment (RTE)"
-            android:parentActivityName=".Chap5Activity" />
+            android:parentActivityName=".TutorialActivity" />
+            <!-- android:parentActivityName=".Chap5Activity" /> -->
         <activity android:name=".Chap5_2Activity"></activity>
     </application>
 

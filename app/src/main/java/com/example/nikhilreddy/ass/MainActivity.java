@@ -51,59 +51,59 @@ public class MainActivity extends AppCompatActivity {
 
         init();
 
-        tutorialcard.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                if(tutoriallayout.getVisibility() == View.VISIBLE) {
-                    tutoriallayout.setVisibility(View.GONE);
-                    quizlayout.setVisibility(View.VISIBLE);
-                    quizoptionslayout.setVisibility(View.GONE);
-                } else {
-                    tutoriallayout.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-        faqcard.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                tutoriallayout.setVisibility(View.VISIBLE);
-                quizlayout.setVisibility(View.VISIBLE);
-                quizoptionslayout.setVisibility(View.GONE);
-
-            }
-        });
-
-        quizcard.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                if(quizlayout.getVisibility() == View.VISIBLE) {
-                    tutoriallayout.setVisibility(View.VISIBLE);
-                    quizlayout.setVisibility(View.GONE);
-                    quizoptionslayout.setVisibility(View.VISIBLE);
-                } else {
-                    quizlayout.setVisibility(View.VISIBLE);
-                    quizoptionslayout.setVisibility(View.GONE);
-                }
-            }
-        });
+//        tutorialcard.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View view) {
+//                if(tutoriallayout.getVisibility() == View.VISIBLE) {
+//                    tutoriallayout.setVisibility(View.GONE);
+//                    quizlayout.setVisibility(View.VISIBLE);
+//                    quizoptionslayout.setVisibility(View.GONE);
+//                } else {
+//                    tutoriallayout.setVisibility(View.VISIBLE);
+//                }
+//            }
+//        });
+//        faqcard.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View view) {
+//                tutoriallayout.setVisibility(View.VISIBLE);
+//                quizlayout.setVisibility(View.VISIBLE);
+//                quizoptionslayout.setVisibility(View.GONE);
+//
+//            }
+//        });
+//
+//        quizcard.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View view) {
+//                if(quizlayout.getVisibility() == View.VISIBLE) {
+//                    tutoriallayout.setVisibility(View.VISIBLE);
+//                    quizlayout.setVisibility(View.GONE);
+//                    quizoptionslayout.setVisibility(View.VISIBLE);
+//                } else {
+//                    quizlayout.setVisibility(View.VISIBLE);
+//                    quizoptionslayout.setVisibility(View.GONE);
+//                }
+//            }
+//        });
 
         tutoriallayout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 startActivity(beginnertut_intent);
             }
         });
-        easyquizlayout.setOnClickListener(new View.OnClickListener() {
+        quizlayout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 startActivity(easyquiz_intent);
             }
         });
-        mediumquizlayout.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                startActivity(mediumquiz_intent);
-            }
-        });
-        hardquizlayout.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                startActivity(hardquiz_intent);
-            }
-        });
+//        mediumquizlayout.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View view) {
+//                startActivity(mediumquiz_intent);
+//            }
+//        });
+//        hardquizlayout.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View view) {
+//                startActivity(hardquiz_intent);
+//            }
+//        });
         articleslayout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 startActivity(articles_intent);

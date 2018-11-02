@@ -92,16 +92,7 @@
         \n\nFocuses to specify standard architecture for system software
         \n\nSoftware development based on function based approach
         \n\nAims to improve performance, safety and environmental electronic systems
-    </string>
-    <string name="_112_m2">
-        To have a common requirements/ understanding between auto stake holders
-        \n\nCreate a standard core for industry on basic functions where innovative functions are built on top of it
-        \n\nHW and SW are widely independent. With parallel developments, reduces the development time and costs
-        \n\nRe-use of software increases at OEMs and suppliers. Improve the quality and efficiency
-        \n\nFaster development of auto software thru commercial design tools
-        \n\nSoftware integration from multiple vendors at ease
-    </string>
-    <string name="_113_m1">
+   <string name="_111_m2">
         AUTOSAR consortium consists of three members identified based on their initiatives
 \n\nThe members will be given appropriate rights and allocated to the various duties
 \n\nMembers of AUTOSAR
@@ -111,6 +102,15 @@
 \n\nSupport members of AUTOSAR
 \n  - Development members
 \n  - Attendees
+    </string>
+    </string>
+    <string name="_112_m2">
+        To have a common requirements/ understanding between auto stake holders
+        \n\nCreate a standard core for industry on basic functions where innovative functions are built on top of it
+        \n\nHW and SW are widely independent. With parallel developments, reduces the development time and costs
+        \n\nRe-use of software increases at OEMs and suppliers. Improve the quality and efficiency
+        \n\nFaster development of auto software thru commercial design tools
+        \n\nSoftware integration from multiple vendors at ease
     </string>
     <string name="_121_m5">
         Follows ‘Component’ style

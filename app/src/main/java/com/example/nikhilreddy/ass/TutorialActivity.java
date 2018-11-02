@@ -67,7 +67,9 @@ public class TutorialActivity extends AppCompatActivity {
         });
         chap5Card.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                startActivity(chap5_intent);
+                //startActivity(chap5_intent);
+                final Intent chap5_1_intent = new Intent(TutorialActivity.this, Chap5_1Activity.class);
+                startActivity(chap5_1_intent);
             }
         });
 

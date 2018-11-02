@@ -15,7 +15,7 @@ public class Chap1_1Activity extends AppCompatActivity {
 
         final CardView chap1_1_1Card = (CardView) findViewById(R.id.chap1_1_1Card);
         final CardView chap1_1_2Card = (CardView) findViewById(R.id.chap1_1_2Card);
-        final CardView chap1_1_3Card = (CardView) findViewById(R.id.chap1_1_3Card);
+        //final CardView chap1_1_3Card = (CardView) findViewById(R.id.chap1_1_3Card);
         final CardView chap1_1_4Card = (CardView) findViewById(R.id.chap1_1_4Card);
         final CardView chap1_1_5Card = (CardView) findViewById(R.id.chap1_1_5Card);
         final CardView chap1_1_6Card = (CardView) findViewById(R.id.chap1_1_6Card);
@@ -35,13 +35,13 @@ public class Chap1_1Activity extends AppCompatActivity {
                 startActivity(display_intent);
             }
         });
-        chap1_1_3Card.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                final Intent display_intent = new Intent(Chap1_1Activity.this, displayContent.class);
-                display_intent.putExtra("topic",1_1_3);
-                startActivity(display_intent);
-            }
-        });
+//        chap1_1_3Card.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View view) {
+//                final Intent display_intent = new Intent(Chap1_1Activity.this, displayContent.class);
+//                display_intent.putExtra("topic",1_1_3);
+//                startActivity(display_intent);
+//            }
+//        });
         chap1_1_4Card.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 final Intent display_intent = new Intent(Chap1_1Activity.this, displayContent.class);

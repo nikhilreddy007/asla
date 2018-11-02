@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * It is used for FAQ activity
  */
-public class FaqActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
+public class FaqActivity extends AppCompatActivity /*implements SearchView.OnQueryTextListener*/ {
 
     ExpandableListView expandableListView;
     ExpandableListAdapter expandableListAdapter;
@@ -80,26 +80,26 @@ public class FaqActivity extends AppCompatActivity implements SearchView.OnQuery
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_search, menu);
-
-        MenuItem searchItem = menu.findItem(R.id.search);
-        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-        searchView.setOnQueryTextListener(this);
-
-        return true;
-    }
-
-    @Override
-    public boolean onQueryTextSubmit(String query) {
-        // User pressed the search button
-        return false;
-    }
-
-    @Override
-    public boolean onQueryTextChange(String newText) {
-        // User changed the text
-        return false;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.menu_search, menu);
+//
+//        MenuItem searchItem = menu.findItem(R.id.search);
+//        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+//        searchView.setOnQueryTextListener(this);
+//
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onQueryTextSubmit(String query) {
+//        // User pressed the search button
+//        return false;
+//    }
+//
+//    @Override
+//    public boolean onQueryTextChange(String newText) {
+//        // User changed the text
+//        return false;
+//    }
 }
