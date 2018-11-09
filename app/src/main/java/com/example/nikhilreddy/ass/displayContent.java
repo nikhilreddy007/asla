@@ -6,22 +6,60 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
+import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
-public class displayContent extends AppCompatActivity {
+import pl.polidea.view.ZoomView;
 
-    private float mScale = 1f;
-    private ScaleGestureDetector mScaleDetector;
-    GestureDetector gestureDetector;
+public class displayContent extends AppCompatActivity {
+//    private float mScale = 1f;
+//    private ScaleGestureDetector mScaleDetector;
+//    GestureDetector gestureDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_content);
+
+
+//        gestureDetector = new GestureDetector(this, new GestureListener());
+//        mScaleDetector = new ScaleGestureDetector(this, new ScaleGestureDetector.SimpleOnScaleGestureListener()
+//        {
+//            @Override
+//            public boolean onScale(ScaleGestureDetector detector)
+//            {
+//                float scale = 1 - detector.getScaleFactor();
+//
+//                float prevScale = mScale;
+//                mScale += scale;
+//
+//                if (mScale < 0.1f) // Minimum scale condition:
+//                    mScale = 0.1f;
+//
+//                if (mScale > 1f) // Maximum scale condition:
+//                    mScale = 1f;
+//                ScaleAnimation scaleAnimation = new ScaleAnimation(1f / prevScale, 1f / mScale, 1f / prevScale, 1f / mScale, detector.getFocusX(), detector.getFocusY());
+//                scaleAnimation.setDuration(0);
+//                scaleAnimation.setFillAfter(true);
+//                ScrollView layout =(ScrollView) findViewById(R.id.zoom_scrollview);
+//                layout.startAnimation(scaleAnimation);
+//                return true;
+//            }
+//        });
+        final ZoomLinearLayout zoomLinearLayout = (ZoomLinearLayout) findViewById(R.id.zoom_linear_layout);
+        zoomLinearLayout.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                zoomLinearLayout.init(displayContent.this);
+                return false;
+            }
+        });
 
         int topic;
         topic = getIntent().getIntExtra("topic", 0);
@@ -267,4 +305,25 @@ public class displayContent extends AppCompatActivity {
             }
         }
     }
+
+//    @Override
+//    public boolean dispatchTouchEvent(MotionEvent event) {
+//        super.dispatchTouchEvent(event);
+//        mScaleDetector.onTouchEvent(event);
+//        gestureDetector.onTouchEvent(event);
+//        return gestureDetector.onTouchEvent(event);
+//    }
+//    private class GestureListener extends GestureDetector.SimpleOnGestureListener {
+//        @Override
+//        public boolean onDown(MotionEvent e) {
+//            return true;
+//        }
+//        // event when double tap occurs
+//        @Override
+//        public boolean onDoubleTap(MotionEvent e) {
+//            // double tap fired.
+//            return true;
+//        }
+//    }
+
 }

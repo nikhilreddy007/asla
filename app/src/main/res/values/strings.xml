@@ -1287,7 +1287,7 @@ The communication happens thru ports those implements interfaces as per communic
 \n  - The latest data written back to ECU at shutdown
 \n  - The new data shall be read from next journey onwards</string>
 
-    
+
     <string name="a1">
         The interoperability of solutions requires a high quality standard. AUTOSAR has defined a process to ensure such high quality when changes are introduced in a revision or when new features are introduced in new minor or major releases.
         \n\n

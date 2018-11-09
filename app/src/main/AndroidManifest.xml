@@ -163,8 +163,9 @@
             android:name=".Chap5_1Activity"
             android:label="AUTOSAR RunTimeEnvironment (RTE)"
             android:parentActivityName=".TutorialActivity" />
-            <!-- android:parentActivityName=".Chap5Activity" /> -->
-        <activity android:name=".Chap5_2Activity"></activity>
+        <!-- android:parentActivityName=".Chap5Activity" /> -->
+        <activity android:name=".Chap5_2Activity" />
+        <!--<activity android:name=".ZoomLinearLayout"></activity>-->
     </application>
 
 </manifest>
