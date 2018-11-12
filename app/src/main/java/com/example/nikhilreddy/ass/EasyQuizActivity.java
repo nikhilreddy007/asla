@@ -25,7 +25,7 @@ public class EasyQuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
     }
-    String ans[] = {"Canberra","Virat Kohli","Mahatma Gandhi","206","Satya Nadella","Russo Brothers","1939","Euclid","5","Washington DC"};
+    String ans[] = {"Run Time Environment","SoftWareComponent","Services layer, Ecu Abstraction layer, CDD, Microcontroller Abstraction layer","Protocol Data Unit","Automotive open system Architecture","Micro controller Abstraction layer","Virtual Function Bus","Between ports and system signal","Function","2002"};
 
     public void onSubmit(View view){
 

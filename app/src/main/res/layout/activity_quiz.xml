@@ -10,7 +10,7 @@
         android:id="@+id/full"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/darker_gray"
+        android:background="#E1F5FE"
         android:orientation="vertical"
         tools:context="com.example.nikhilreddy.ass.EasyQuizActivity">
 
@@ -20,14 +20,14 @@
             android:layout_marginTop="18dp"
             android:layout_marginLeft="18dp"
             android:layout_marginRight="18dp"
-            android:background="#FFFFFF"
+            android:background="@drawable/roundcornerswhite"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="What is the capital of Australia?"
+                android:text="What is RTE?"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -50,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Sydney"
+                    android:text="Run Time Event"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -58,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Atlantis"
+                    android:text="Real Time Event"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -66,7 +66,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Melbourne"
+                    android:text="Run Time Environment"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -74,7 +74,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Canberra"
+                    android:text="Real Time Environment"
                     android:textSize="15sp" />
             </RadioGroup>
 
@@ -86,14 +86,14 @@
             android:layout_marginTop="18dp"
             android:layout_marginLeft="18dp"
             android:layout_marginRight="18dp"
-            android:background="#FFFFFF"
+            android:background="@drawable/roundcornerswhite"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="Who is the captain of Indian Cricket Team"
+                android:text="What is SWC"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -116,7 +116,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Sunil Chettri"
+                    android:text="SoftWareComponent"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -124,7 +124,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Virat Kohli"
+                    android:text="SoftWareComplexity"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -132,7 +132,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="M S Dhoni"
+                    android:text="SoftWareCommunication"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -140,7 +140,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Sourav Ganguly"
+                    android:text="SoftWareConnection"
                     android:textSize="15sp" />
             </RadioGroup>
 
@@ -152,14 +152,14 @@
             android:layout_marginTop="18dp"
             android:layout_marginLeft="18dp"
             android:layout_marginRight="18dp"
-            android:background="#FFFFFF"
+            android:background="@drawable/roundcornerswhite"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="who is the father of the nation?"
+                android:text="What are layers available in BSW?"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -182,7 +182,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Rahul Gandhi"
+                    android:text="Services layer, Ecu Abstraction layer, Application Layer, Microcontroller
+Abstraction layer"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -190,7 +191,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Mahatma Gandhi"
+                    android:text="Services layer, Ecu Abstraction layer, RTE, Microcontroller Abstraction layer"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -198,7 +199,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Obama"
+                    android:text="Services layer, Ecu Abstraction layer, CDD, Microcontroller Abstraction layer"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -206,7 +207,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Osama Bin-Ladin"
+                    android:text="Services layer, Ecu Abstraction layer, Microcontroller Abstraction layer"
                     android:textSize="15sp" />
             </RadioGroup>
 
@@ -218,14 +219,14 @@
             android:layout_marginTop="18dp"
             android:layout_marginLeft="18dp"
             android:layout_marginRight="18dp"
-            android:background="#FFFFFF"
+            android:background="@drawable/roundcornerswhite"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="How many bones do we have?"
+                android:text="What is PDU?"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -248,7 +249,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="206"
+                    android:text="Provide Data Unit"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -256,7 +257,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="207"
+                    android:text="Protocol Device Unit"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -264,7 +265,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="208"
+                    android:text="Provide Device Unit"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -272,7 +273,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="209"
+                    android:text="Protocol Data Unit"
                     android:textSize="15sp" />
             </RadioGroup>
 
@@ -284,14 +285,14 @@
             android:layout_marginTop="18dp"
             android:layout_marginLeft="18dp"
             android:layout_marginRight="18dp"
-            android:background="#FFFFFF"
+            android:background="@drawable/roundcornerswhite"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="Who is the CEO of Microsoft?"
+                android:text="What is full form of Autosar?"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -314,7 +315,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Sundar Picchai"
+                    android:text="Automotive open source Architecture"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -322,7 +323,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Warren Buffet"
+                    android:text="Autonomous open system Architecture"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -330,7 +331,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Bill Gates"
+                    android:text="Automotive open system Architecture"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -338,7 +339,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Satya Nadella"
+                    android:text="Autonomous open source Architecture"
                     android:textSize="15sp" />
             </RadioGroup>
 
@@ -350,14 +351,14 @@
             android:layout_marginTop="18dp"
             android:layout_marginLeft="18dp"
             android:layout_marginRight="18dp"
-            android:background="#FFFFFF"
+            android:background="@drawable/roundcornerswhite"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="Who is the director of Infinity War?"
+                android:text="What is MCAL?"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -380,7 +381,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Jhos Whedon"
+                    android:text="Micro controller Abstraction layer"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -388,7 +389,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Stan Lee"
+                    android:text="Mode connection Authentication layer"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -396,7 +397,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Kevin Fiege"
+                    android:text="Micro controller Arbitration Layer"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -404,7 +405,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Russo Brothers"
+                    android:text="Micro controller Architecture Layer"
                     android:textSize="15sp" />
             </RadioGroup>
 
@@ -416,14 +417,14 @@
             android:layout_marginTop="18dp"
             android:layout_marginLeft="18dp"
             android:layout_marginRight="18dp"
-            android:background="#FFFFFF"
+            android:background="@drawable/roundcornerswhite"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="When was world war 2 started?"
+                android:text="What is VFB?"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -446,7 +447,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="1914"
+                    android:text="Virtual Free Bus"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -454,7 +455,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="1945"
+                    android:text="Virtual Function Bus"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -462,7 +463,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="1939"
+                    android:text="Virtual Function Board"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -470,7 +471,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="1947"
+                    android:text="Virtual Free Board"
                     android:textSize="15sp" />
             </RadioGroup>
 
@@ -482,14 +483,14 @@
             android:layout_marginTop="18dp"
             android:layout_marginLeft="18dp"
             android:layout_marginRight="18dp"
-            android:background="#FFFFFF"
+            android:background="@drawable/roundcornerswhite"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="Who is the father of Geometry"
+                android:text="Data mapping will be done between?"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -512,7 +513,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Aristotle"
+                    android:text="Between ports and system signal"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -520,7 +521,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Euclid"
+                    android:text="Ports and SWC"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -528,7 +529,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Kepler"
+                    android:text="Between SWC’s"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -536,7 +537,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Pythogorus"
+                    android:text="All of the above."
                     android:textSize="15sp" />
             </RadioGroup>
 
@@ -548,14 +549,14 @@
             android:layout_marginTop="18dp"
             android:layout_marginLeft="18dp"
             android:layout_marginRight="18dp"
-            android:background="#FFFFFF"
+            android:background="@drawable/roundcornerswhite"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="What is the value of 2+3 ?"
+                android:text="What is a Runnable Entity?"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -578,7 +579,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="5"
+                    android:text="Function"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -586,7 +587,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="-1"
+                    android:text="Task"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -594,7 +595,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="6"
+                    android:text="Variable"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -602,7 +603,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="4"
+                    android:text="MACRO"
                     android:textSize="15sp" />
             </RadioGroup>
 
@@ -612,14 +613,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="18dp"
-            android:background="#FFFFFF"
+            android:background="@drawable/roundcornerswhite"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="What is the capital of USA?"
+                android:text="In which Year Autosar Consortium found?"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -642,7 +643,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="New York"
+                    android:text="1999"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -650,7 +651,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Washington DC"
+                    android:text="2002"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -658,7 +659,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="California"
+                    android:text="2012"
                     android:textSize="15sp" />
 
                 <RadioButton
@@ -666,7 +667,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Alaska"
+                    android:text="2004"
                     android:textSize="15sp" />
             </RadioGroup>
 
@@ -677,11 +678,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="SUBMIT"
-            android:textColor="@color/black_overlay"
+            android:textColor="#000000"
             android:textSize="25sp"
-            android:background="#FFFFFF"
+            android:background="@drawable/roundcornerswhite"
             android:padding="10dp"
             android:onClick="onSubmit"
             android:layout_margin="18dp"/>
+
     </LinearLayout>
+
 </ScrollView>
