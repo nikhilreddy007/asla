@@ -15,7 +15,10 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import pl.polidea.view.ZoomView;
+import com.davemorrissey.labs.subscaleview.ImageSource;
+import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
+
+//import pl.polidea.view.ZoomView;
 
 public class displayContent extends AppCompatActivity {
 //    private float mScale = 1f;
@@ -26,7 +29,6 @@ public class displayContent extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_content);
-
 
 //        gestureDetector = new GestureDetector(this, new GestureListener());
 //        mScaleDetector = new ScaleGestureDetector(this, new ScaleGestureDetector.SimpleOnScaleGestureListener()
@@ -52,14 +54,14 @@ public class displayContent extends AppCompatActivity {
 //                return true;
 //            }
 //        });
-        final ZoomLinearLayout zoomLinearLayout = (ZoomLinearLayout) findViewById(R.id.zoom_linear_layout);
-        zoomLinearLayout.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                zoomLinearLayout.init(displayContent.this);
-                return false;
-            }
-        });
+//        final ZoomLinearLayout zoomLinearLayout = (ZoomLinearLayout) findViewById(R.id.zoom_linear_layout);
+//        zoomLinearLayout.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                zoomLinearLayout.init(displayContent.this);
+//                return false;
+//            }
+//        });
 
         int topic;
         topic = getIntent().getIntExtra("topic", 0);
@@ -81,22 +83,22 @@ public class displayContent extends AppCompatActivity {
         final TextView matterText14 = (TextView) findViewById(R.id.matter_textview14);
         final TextView matterText15 = (TextView) findViewById(R.id.matter_textview15);
         final TextView matterText16 = (TextView) findViewById(R.id.matter_textview16);
-        final ImageView image1 = (ImageView) findViewById(R.id.image_view1);
-        final ImageView image2 = (ImageView) findViewById(R.id.image_view2);
-        final ImageView image3 = (ImageView) findViewById(R.id.image_view3);
-        final ImageView image4 = (ImageView) findViewById(R.id.image_view4);
-        final ImageView image5 = (ImageView) findViewById(R.id.image_view5);
-        final ImageView image6 = (ImageView) findViewById(R.id.image_view6);
-        final ImageView image7 = (ImageView) findViewById(R.id.image_view7);
-        final ImageView image8 = (ImageView) findViewById(R.id.image_view8);
-        final ImageView image9 = (ImageView) findViewById(R.id.image_view9);
-        final ImageView image10 = (ImageView) findViewById(R.id.image_view10);
-        final ImageView image11 = (ImageView) findViewById(R.id.image_view11);
-        final ImageView image12 = (ImageView) findViewById(R.id.image_view12);
-        final ImageView image13 = (ImageView) findViewById(R.id.image_view13);
-        final ImageView image14 = (ImageView) findViewById(R.id.image_view14);
-        final ImageView image15 = (ImageView) findViewById(R.id.image_view15);
-        final ImageView image16 = (ImageView) findViewById(R.id.image_view16);
+        SubsamplingScaleImageView image1 = (SubsamplingScaleImageView)findViewById(R.id.image_view1);
+        SubsamplingScaleImageView image2 = (SubsamplingScaleImageView) findViewById(R.id.image_view2);
+        SubsamplingScaleImageView image3 = (SubsamplingScaleImageView) findViewById(R.id.image_view3);
+        SubsamplingScaleImageView image4 = (SubsamplingScaleImageView) findViewById(R.id.image_view4);
+        SubsamplingScaleImageView image5 = (SubsamplingScaleImageView) findViewById(R.id.image_view5);
+        SubsamplingScaleImageView image6 = (SubsamplingScaleImageView) findViewById(R.id.image_view6);
+        SubsamplingScaleImageView image7 = (SubsamplingScaleImageView) findViewById(R.id.image_view7);
+        SubsamplingScaleImageView image8 = (SubsamplingScaleImageView) findViewById(R.id.image_view8);
+        SubsamplingScaleImageView image9 = (SubsamplingScaleImageView) findViewById(R.id.image_view9);
+        SubsamplingScaleImageView image10 = (SubsamplingScaleImageView) findViewById(R.id.image_view10);
+        SubsamplingScaleImageView image11 = (SubsamplingScaleImageView) findViewById(R.id.image_view11);
+        SubsamplingScaleImageView image12 = (SubsamplingScaleImageView) findViewById(R.id.image_view12);
+        SubsamplingScaleImageView image13 = (SubsamplingScaleImageView) findViewById(R.id.image_view13);
+        SubsamplingScaleImageView image14 = (SubsamplingScaleImageView) findViewById(R.id.image_view14);
+        SubsamplingScaleImageView image15 = (SubsamplingScaleImageView) findViewById(R.id.image_view15);
+        SubsamplingScaleImageView image16 = (SubsamplingScaleImageView) findViewById(R.id.image_view16);
 
         if(topic != 512) {
             String str = "_" + Integer.toString(topic);
@@ -138,35 +140,35 @@ public class displayContent extends AppCompatActivity {
             }
 
             if ((getResources().getIdentifier(str + "_i1", "drawable", this.getPackageName())) != 0) {
-                image1.setImageResource(getResources().getIdentifier(str + "_i1", "drawable", this.getPackageName()));
+                image1.setImage(ImageSource.resource(getResources().getIdentifier(str + "_i1", "drawable", this.getPackageName())));
                 image1.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier(str + "_i2", "drawable", this.getPackageName())) != 0) {
-                image2.setImageResource(getResources().getIdentifier(str + "_i2", "drawable", this.getPackageName()));
+                image2.setImage(ImageSource.resource(getResources().getIdentifier(str + "_i2", "drawable", this.getPackageName())));
                 image2.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier(str + "_i3", "drawable", this.getPackageName())) != 0) {
-                image3.setImageResource(getResources().getIdentifier(str + "_i3", "drawable", this.getPackageName()));
+                image3.setImage(ImageSource.resource(getResources().getIdentifier(str + "_i3", "drawable", this.getPackageName())));
                 image3.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier(str + "_i4", "drawable", this.getPackageName())) != 0) {
-                image4.setImageResource(getResources().getIdentifier(str + "_i4", "drawable", this.getPackageName()));
+                image4.setImage(ImageSource.resource(getResources().getIdentifier(str + "_i4", "drawable", this.getPackageName())));
                 image4.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier(str + "_i5", "drawable", this.getPackageName())) != 0) {
-                image5.setImageResource(getResources().getIdentifier(str + "_i5", "drawable", this.getPackageName()));
+                image5.setImage(ImageSource.resource(getResources().getIdentifier(str + "_i5", "drawable", this.getPackageName())));
                 image5.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier(str + "_i6", "drawable", this.getPackageName())) != 0) {
-                image6.setImageResource(getResources().getIdentifier(str + "_i6", "drawable", this.getPackageName()));
+                image6.setImage(ImageSource.resource(getResources().getIdentifier(str + "_i6", "drawable", this.getPackageName())));
                 image6.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier(str + "_i7", "drawable", this.getPackageName())) != 0) {
-                image7.setImageResource(getResources().getIdentifier(str + "_i7", "drawable", this.getPackageName()));
+                image7.setImage(ImageSource.resource(getResources().getIdentifier(str + "_i7", "drawable", this.getPackageName())));
                 image7.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier(str + "_i8", "drawable", this.getPackageName())) != 0) {
-                image8.setImageResource(getResources().getIdentifier(str + "_i8", "drawable", this.getPackageName()));
+                image8.setImage(ImageSource.resource(getResources().getIdentifier(str + "_i8", "drawable", this.getPackageName())));
                 image8.setVisibility(View.VISIBLE);
             }
         } else {
@@ -240,67 +242,67 @@ public class displayContent extends AppCompatActivity {
             }
 
             if ((getResources().getIdentifier("_512_i1", "drawable", this.getPackageName())) != 0) {
-                image1.setImageResource(getResources().getIdentifier("_512_i1", "drawable", this.getPackageName()));
+                image1.setImage(ImageSource.resource(getResources().getIdentifier("_512_i1", "drawable", this.getPackageName())));
                 image1.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier("_512_i2", "drawable", this.getPackageName())) != 0) {
-                image2.setImageResource(getResources().getIdentifier("_512_i2", "drawable", this.getPackageName()));
+                image2.setImage(ImageSource.resource(getResources().getIdentifier("_512_i2", "drawable", this.getPackageName())));
                 image2.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier("_512_i3", "drawable", this.getPackageName())) != 0) {
-                image3.setImageResource(getResources().getIdentifier("_512_i3", "drawable", this.getPackageName()));
+                image3.setImage(ImageSource.resource(getResources().getIdentifier("_512_i3", "drawable", this.getPackageName())));
                 image3.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier("_512_i4", "drawable", this.getPackageName())) != 0) {
-                image4.setImageResource(getResources().getIdentifier("_512_i4", "drawable", this.getPackageName()));
+                image4.setImage(ImageSource.resource(getResources().getIdentifier("_512_i4", "drawable", this.getPackageName())));
                 image4.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier("_512_i5", "drawable", this.getPackageName())) != 0) {
-                image5.setImageResource(getResources().getIdentifier("_512_i5", "drawable", this.getPackageName()));
+                image5.setImage(ImageSource.resource(getResources().getIdentifier("_512_i5", "drawable", this.getPackageName())));
                 image5.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier("_512_i6", "drawable", this.getPackageName())) != 0) {
-                image6.setImageResource(getResources().getIdentifier("_512_i6", "drawable", this.getPackageName()));
+                image6.setImage(ImageSource.resource(getResources().getIdentifier("_512_i6", "drawable", this.getPackageName())));
                 image6.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier("_512_i7", "drawable", this.getPackageName())) != 0) {
-                image7.setImageResource(getResources().getIdentifier("_512_i7", "drawable", this.getPackageName()));
+                image7.setImage(ImageSource.resource(getResources().getIdentifier("_512_i7", "drawable", this.getPackageName())));
                 image7.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier("_512_i8", "drawable", this.getPackageName())) != 0) {
-                image8.setImageResource(getResources().getIdentifier("_512_i8", "drawable", this.getPackageName()));
+                image8.setImage(ImageSource.resource(getResources().getIdentifier("_512_i8", "drawable", this.getPackageName())));
                 image8.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier("_512_i9", "drawable", this.getPackageName())) != 0) {
-                image9.setImageResource(getResources().getIdentifier("_512_i9", "drawable", this.getPackageName()));
+                image9.setImage(ImageSource.resource(getResources().getIdentifier("_512_i9", "drawable", this.getPackageName())));
                 image9.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier("_512_i10", "drawable", this.getPackageName())) != 0) {
-                image10.setImageResource(getResources().getIdentifier("_512_i10", "drawable", this.getPackageName()));
+                image10.setImage(ImageSource.resource(getResources().getIdentifier("_512_i10", "drawable", this.getPackageName())));
                 image10.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier("_512_i11", "drawable", this.getPackageName())) != 0) {
-                image11.setImageResource(getResources().getIdentifier("_512_i11", "drawable", this.getPackageName()));
+                image11.setImage(ImageSource.resource(getResources().getIdentifier("_512_i11", "drawable", this.getPackageName())));
                 image11.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier("_512_i12", "drawable", this.getPackageName())) != 0) {
-                image12.setImageResource(getResources().getIdentifier("_512_i12", "drawable", this.getPackageName()));
+                image12.setImage(ImageSource.resource(getResources().getIdentifier("_512_i12", "drawable", this.getPackageName())));
                 image12.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier("_512_i13", "drawable", this.getPackageName())) != 0) {
-                image13.setImageResource(getResources().getIdentifier("_512_i13", "drawable", this.getPackageName()));
+                image13.setImage(ImageSource.resource(getResources().getIdentifier("_512_i13", "drawable", this.getPackageName())));
                 image13.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier("_512_i14", "drawable", this.getPackageName())) != 0) {
-                image14.setImageResource(getResources().getIdentifier("_512_i14", "drawable", this.getPackageName()));
+                image14.setImage(ImageSource.resource(getResources().getIdentifier("_512_i14", "drawable", this.getPackageName())));
                 image14.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier("_512_i15", "drawable", this.getPackageName())) != 0) {
-                image15.setImageResource(getResources().getIdentifier("_512_i15", "drawable", this.getPackageName()));
+                image15.setImage(ImageSource.resource(getResources().getIdentifier("_512_i15", "drawable", this.getPackageName())));
                 image15.setVisibility(View.VISIBLE);
             }
             if ((getResources().getIdentifier("_512_i16", "drawable", this.getPackageName())) != 0) {
-                image16.setImageResource(getResources().getIdentifier("_512_i16", "drawable", this.getPackageName()));
+                image16.setImage(ImageSource.resource(getResources().getIdentifier("_512_i16", "drawable", this.getPackageName())));
                 image16.setVisibility(View.VISIBLE);
             }
         }

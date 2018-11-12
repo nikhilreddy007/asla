@@ -356,8 +356,13 @@
                         </LinearLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
-
             </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="version 1.0 (for internal use only)"
+                android:gravity="center"
+                android:padding="10dp"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

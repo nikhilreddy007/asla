@@ -27,20 +27,19 @@
                 android:layout_height="60dp"
                 android:layout_gravity="top"
                 android:layout_margin="10dp"
-                android:src="@drawable/contact_circle" />
+                android:src="@drawable/contact_black" />
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
-                android:layout_margin="10dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Goutam sai"
-                    android:textSize="24sp"
+                    android:text="Krishna Chaitanya"
+                    android:textSize="20sp"
                     android:textStyle="bold"
                     android:padding="10dp"/>
 
@@ -52,15 +51,25 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="end"
-                    android:text="Student"
-                    android:textSize="22sp"
-                    android:padding="10dp"
+                    android:text="krishanchaithanya.pulipati@zf.com"
+                    android:textSize="12sp"
+                    android:textIsSelectable="true"
+                    android:gravity="right"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="+919959731136"
+                    android:textSize="16sp"
+                    android:paddingBottom="5dp"
                     android:textStyle="italic" />
             </LinearLayout>
 
             <ImageView
-                android:tag="+918008949939"
+                android:tag="+919959731136"
                 android:onClick="dial"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
@@ -72,347 +81,347 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/backgroundcolor"
-            android:orientation="horizontal">
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:background="@color/backgroundcolor"-->
+            <!--android:orientation="horizontal">-->
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="top"
-                android:layout_margin="10dp"
-                android:src="@drawable/contact_circle" />
+            <!--<ImageView-->
+                <!--android:layout_width="60dp"-->
+                <!--android:layout_height="60dp"-->
+                <!--android:layout_gravity="top"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:src="@drawable/contact_circle" />-->
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="5"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
+            <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="5"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:orientation="vertical">-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Nikhil Reddy"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:padding="10dp"/>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Nikhil Reddy"-->
+                    <!--android:textSize="24sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:padding="10dp"/>-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:background="#818181"/>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="5dp"-->
+                    <!--android:background="#818181"/>-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="end"
-                    android:text="Student"
-                    android:textSize="22sp"
-                    android:padding="10dp"
-                    android:textStyle="italic" />
-            </LinearLayout>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="end"-->
+                    <!--android:text="Student"-->
+                    <!--android:textSize="22sp"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:textStyle="italic" />-->
+            <!--</LinearLayout>-->
 
-            <ImageView
-                android:tag="+918008949939"
-                android:onClick="dial"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="bottom"
-                android:layout_margin="10dp"
-                android:padding="10dp"
-                android:background="@drawable/green_resource_file"
-                android:src="@drawable/phone_white" />
+            <!--<ImageView-->
+                <!--android:tag="+918008949939"-->
+                <!--android:onClick="dial"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_gravity="bottom"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:padding="10dp"-->
+                <!--android:background="@drawable/green_resource_file"-->
+                <!--android:src="@drawable/phone_white" />-->
 
-        </LinearLayout>
+        <!--</LinearLayout>-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/backgroundcolor"
-            android:orientation="horizontal">
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:background="@color/backgroundcolor"-->
+            <!--android:orientation="horizontal">-->
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="top"
-                android:layout_margin="10dp"
-                android:src="@drawable/contact_circle" />
+            <!--<ImageView-->
+                <!--android:layout_width="60dp"-->
+                <!--android:layout_height="60dp"-->
+                <!--android:layout_gravity="top"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:src="@drawable/contact_circle" />-->
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="5"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
+            <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="5"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:orientation="vertical">-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Mahitha"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:padding="10dp"/>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Mahitha"-->
+                    <!--android:textSize="24sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:padding="10dp"/>-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:background="#818181"/>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="5dp"-->
+                    <!--android:background="#818181"/>-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="end"
-                    android:text="Student"
-                    android:textSize="22sp"
-                    android:padding="10dp"
-                    android:textStyle="italic" />
-            </LinearLayout>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="end"-->
+                    <!--android:text="Student"-->
+                    <!--android:textSize="22sp"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:textStyle="italic" />-->
+            <!--</LinearLayout>-->
 
-            <ImageView
-                android:tag="+918008949939"
-                android:onClick="dial"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="bottom"
-                android:layout_margin="10dp"
-                android:padding="10dp"
-                android:background="@drawable/green_resource_file"
-                android:src="@drawable/phone_white" />
+            <!--<ImageView-->
+                <!--android:tag="+918008949939"-->
+                <!--android:onClick="dial"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_gravity="bottom"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:padding="10dp"-->
+                <!--android:background="@drawable/green_resource_file"-->
+                <!--android:src="@drawable/phone_white" />-->
 
-        </LinearLayout>
+        <!--</LinearLayout>-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/backgroundcolor"
-            android:orientation="horizontal">
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:background="@color/backgroundcolor"-->
+            <!--android:orientation="horizontal">-->
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="top"
-                android:layout_margin="10dp"
-                android:src="@drawable/contact_circle" />
+            <!--<ImageView-->
+                <!--android:layout_width="60dp"-->
+                <!--android:layout_height="60dp"-->
+                <!--android:layout_gravity="top"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:src="@drawable/contact_circle" />-->
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="5"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
+            <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="5"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:orientation="vertical">-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Rajan"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:padding="10dp"/>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Rajan"-->
+                    <!--android:textSize="24sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:padding="10dp"/>-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:background="#818181"/>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="5dp"-->
+                    <!--android:background="#818181"/>-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="end"
-                    android:text="Student"
-                    android:textSize="22sp"
-                    android:padding="10dp"
-                    android:textStyle="italic" />
-            </LinearLayout>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="end"-->
+                    <!--android:text="Student"-->
+                    <!--android:textSize="22sp"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:textStyle="italic" />-->
+            <!--</LinearLayout>-->
 
-            <ImageView
-                android:tag="+918008949939"
-                android:onClick="dial"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="bottom"
-                android:layout_margin="10dp"
-                android:padding="10dp"
-                android:background="@drawable/green_resource_file"
-                android:src="@drawable/phone_white" />
+            <!--<ImageView-->
+                <!--android:tag="+918008949939"-->
+                <!--android:onClick="dial"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_gravity="bottom"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:padding="10dp"-->
+                <!--android:background="@drawable/green_resource_file"-->
+                <!--android:src="@drawable/phone_white" />-->
 
-        </LinearLayout>
+        <!--</LinearLayout>-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/backgroundcolor"
-            android:orientation="horizontal">
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:background="@color/backgroundcolor"-->
+            <!--android:orientation="horizontal">-->
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="top"
-                android:layout_margin="10dp"
-                android:src="@drawable/contact_circle" />
+            <!--<ImageView-->
+                <!--android:layout_width="60dp"-->
+                <!--android:layout_height="60dp"-->
+                <!--android:layout_gravity="top"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:src="@drawable/contact_circle" />-->
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="5"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
+            <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="5"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:orientation="vertical">-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Sumanth"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:padding="10dp"/>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Sumanth"-->
+                    <!--android:textSize="24sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:padding="10dp"/>-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:background="#818181"/>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="5dp"-->
+                    <!--android:background="#818181"/>-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="end"
-                    android:text="Student"
-                    android:textSize="22sp"
-                    android:padding="10dp"
-                    android:textStyle="italic" />
-            </LinearLayout>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="end"-->
+                    <!--android:text="Student"-->
+                    <!--android:textSize="22sp"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:textStyle="italic" />-->
+            <!--</LinearLayout>-->
 
-            <ImageView
-                android:tag="+918008949939"
-                android:onClick="dial"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="bottom"
-                android:layout_margin="10dp"
-                android:padding="10dp"
-                android:background="@drawable/green_resource_file"
-                android:src="@drawable/phone_white" />
+            <!--<ImageView-->
+                <!--android:tag="+918008949939"-->
+                <!--android:onClick="dial"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_gravity="bottom"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:padding="10dp"-->
+                <!--android:background="@drawable/green_resource_file"-->
+                <!--android:src="@drawable/phone_white" />-->
 
-        </LinearLayout>
+        <!--</LinearLayout>-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/backgroundcolor"
-            android:orientation="horizontal">
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:background="@color/backgroundcolor"-->
+            <!--android:orientation="horizontal">-->
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="top"
-                android:layout_margin="10dp"
-                android:src="@drawable/contact_circle" />
+            <!--<ImageView-->
+                <!--android:layout_width="60dp"-->
+                <!--android:layout_height="60dp"-->
+                <!--android:layout_gravity="top"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:src="@drawable/contact_circle" />-->
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="5"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
+            <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="5"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:orientation="vertical">-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Rohith"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:padding="10dp"/>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Rohith"-->
+                    <!--android:textSize="24sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:padding="10dp"/>-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:background="#818181"/>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="5dp"-->
+                    <!--android:background="#818181"/>-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="end"
-                    android:text="Student"
-                    android:textSize="22sp"
-                    android:padding="10dp"
-                    android:textStyle="italic" />
-            </LinearLayout>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="end"-->
+                    <!--android:text="Student"-->
+                    <!--android:textSize="22sp"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:textStyle="italic" />-->
+            <!--</LinearLayout>-->
 
-            <ImageView
-                android:tag="+918008949939"
-                android:onClick="dial"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="bottom"
-                android:layout_margin="10dp"
-                android:padding="10dp"
-                android:background="@drawable/green_resource_file"
-                android:src="@drawable/phone_white" />
+            <!--<ImageView-->
+                <!--android:tag="+918008949939"-->
+                <!--android:onClick="dial"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_gravity="bottom"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:padding="10dp"-->
+                <!--android:background="@drawable/green_resource_file"-->
+                <!--android:src="@drawable/phone_white" />-->
 
-        </LinearLayout>
+        <!--</LinearLayout>-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/backgroundcolor"
-            android:orientation="horizontal">
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:background="@color/backgroundcolor"-->
+            <!--android:orientation="horizontal">-->
 
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="top"
-                android:layout_margin="10dp"
-                android:src="@drawable/contact_circle" />
+            <!--<ImageView-->
+                <!--android:layout_width="60dp"-->
+                <!--android:layout_height="60dp"-->
+                <!--android:layout_gravity="top"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:src="@drawable/contact_circle" />-->
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="5"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
+            <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="5"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:orientation="vertical">-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Sriya"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:padding="10dp"/>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Sriya"-->
+                    <!--android:textSize="24sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:padding="10dp"/>-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="5dp"
-                    android:background="#818181"/>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="5dp"-->
+                    <!--android:background="#818181"/>-->
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="end"
-                    android:text="Student"
-                    android:textSize="22sp"
-                    android:padding="10dp"
-                    android:textStyle="italic" />
-            </LinearLayout>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:gravity="end"-->
+                    <!--android:text="Student"-->
+                    <!--android:textSize="22sp"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:textStyle="italic" />-->
+            <!--</LinearLayout>-->
 
-            <ImageView
-                android:tag="+918008949939"
-                android:onClick="dial"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="bottom"
-                android:layout_margin="10dp"
-                android:padding="10dp"
-                android:background="@drawable/green_resource_file"
-                android:src="@drawable/phone_white" />
+            <!--<ImageView-->
+                <!--android:tag="+918008949939"-->
+                <!--android:onClick="dial"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_gravity="bottom"-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:padding="10dp"-->
+                <!--android:background="@drawable/green_resource_file"-->
+                <!--android:src="@drawable/phone_white" />-->
 
-        </LinearLayout>
+        <!--</LinearLayout>-->
 
     </LinearLayout>
 
