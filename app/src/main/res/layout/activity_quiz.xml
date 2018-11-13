@@ -77,7 +77,13 @@
                     android:text="Real Time Environment"
                     android:textSize="15sp" />
             </RadioGroup>
-
+            <TextView
+                android:id="@+id/correctAns1"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Correct answer : "/>
         </LinearLayout>
 
         <LinearLayout
@@ -143,7 +149,13 @@
                     android:text="SoftWareConnection"
                     android:textSize="15sp" />
             </RadioGroup>
-
+            <TextView
+                android:id="@+id/correctAns2"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Correct answer : "/>
         </LinearLayout>
 
         <LinearLayout
@@ -210,7 +222,13 @@ Abstraction layer"
                     android:text="Services layer, Ecu Abstraction layer, Microcontroller Abstraction layer"
                     android:textSize="15sp" />
             </RadioGroup>
-
+            <TextView
+                android:id="@+id/correctAns3"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Correct answer : "/>
         </LinearLayout>
 
         <LinearLayout
@@ -276,7 +294,13 @@ Abstraction layer"
                     android:text="Protocol Data Unit"
                     android:textSize="15sp" />
             </RadioGroup>
-
+            <TextView
+                android:id="@+id/correctAns4"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Correct answer : "/>
         </LinearLayout>
 
         <LinearLayout
@@ -342,7 +366,13 @@ Abstraction layer"
                     android:text="Autonomous open source Architecture"
                     android:textSize="15sp" />
             </RadioGroup>
-
+            <TextView
+                android:id="@+id/correctAns5"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Correct answer : "/>
         </LinearLayout>
 
         <LinearLayout
@@ -408,7 +438,13 @@ Abstraction layer"
                     android:text="Micro controller Architecture Layer"
                     android:textSize="15sp" />
             </RadioGroup>
-
+            <TextView
+                android:id="@+id/correctAns6"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Correct answer : "/>
         </LinearLayout>
 
         <LinearLayout
@@ -474,7 +510,13 @@ Abstraction layer"
                     android:text="Virtual Free Board"
                     android:textSize="15sp" />
             </RadioGroup>
-
+            <TextView
+                android:id="@+id/correctAns7"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Correct answer : "/>
         </LinearLayout>
 
         <LinearLayout
@@ -540,7 +582,13 @@ Abstraction layer"
                     android:text="All of the above."
                     android:textSize="15sp" />
             </RadioGroup>
-
+            <TextView
+                android:id="@+id/correctAns8"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Correct answer : "/>
         </LinearLayout>
 
         <LinearLayout
@@ -606,7 +654,13 @@ Abstraction layer"
                     android:text="MACRO"
                     android:textSize="15sp" />
             </RadioGroup>
-
+            <TextView
+                android:id="@+id/correctAns9"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Correct answer : "/>
         </LinearLayout>
 
         <LinearLayout
@@ -670,7 +724,13 @@ Abstraction layer"
                     android:text="2004"
                     android:textSize="15sp" />
             </RadioGroup>
-
+            <TextView
+                android:id="@+id/correctAns10"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Correct answer : "/>
         </LinearLayout>
 
         <Button

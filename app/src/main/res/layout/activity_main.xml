@@ -93,7 +93,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="@string/description"
+                            android:text="learn AUTOSAR"
                             android:textColor="@android:color/darker_gray" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -143,7 +143,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="@string/description"
+                            android:text="for reference"
                             android:textColor="@android:color/darker_gray" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -202,7 +202,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="@string/description"
+                            android:text="frequent questions"
                             android:textColor="@android:color/darker_gray" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -252,7 +252,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="5dp"
-                            android:text="@string/description"
+                            android:text="test yourself"
                             android:textColor="@android:color/darker_gray" />
                     </LinearLayout>
 
@@ -360,7 +360,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="version 1.0 (for internal use only)"
+                android:text="version 1.0"
                 android:gravity="center"
                 android:padding="10dp"/>
         </LinearLayout>

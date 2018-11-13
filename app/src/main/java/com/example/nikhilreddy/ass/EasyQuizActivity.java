@@ -62,6 +62,17 @@ public class EasyQuizActivity extends AppCompatActivity {
         RadioGroup radiogroup10 = (RadioGroup) findViewById(R.id.rg10);
         int radiobuttonId10 = radiogroup10.getCheckedRadioButtonId();
 
+        TextView corrAns1 = (TextView) findViewById(R.id.correctAns1);
+        TextView corrAns2 = (TextView) findViewById(R.id.correctAns2);
+        TextView corrAns3 = (TextView) findViewById(R.id.correctAns3);
+        TextView corrAns4 = (TextView) findViewById(R.id.correctAns4);
+        TextView corrAns5 = (TextView) findViewById(R.id.correctAns5);
+        TextView corrAns6 = (TextView) findViewById(R.id.correctAns6);
+        TextView corrAns7 = (TextView) findViewById(R.id.correctAns7);
+        TextView corrAns8 = (TextView) findViewById(R.id.correctAns8);
+        TextView corrAns9 = (TextView) findViewById(R.id.correctAns9);
+        TextView corrAns10 = (TextView) findViewById(R.id.correctAns10);
+
         if(radiobuttonId1 != -1){
             c++;
         }
@@ -108,6 +119,8 @@ public class EasyQuizActivity extends AppCompatActivity {
                 total++;
             } else {
                 linearLayout1.setBackgroundColor(getResources().getColor(R.color.wrong));
+                corrAns1.setText("Correct answer : "+ans[0]);
+                corrAns1.setVisibility(View.VISIBLE);
             }
 
 
@@ -119,6 +132,8 @@ public class EasyQuizActivity extends AppCompatActivity {
                 total++;
             } else {
                 linearLayout2.setBackgroundColor(getResources().getColor(R.color.wrong));
+                corrAns2.setText("Correct answer : "+ans[1]);
+                corrAns2.setVisibility(View.VISIBLE);
             }
 
 
@@ -130,6 +145,8 @@ public class EasyQuizActivity extends AppCompatActivity {
                 total++;
             } else {
                 linearLayout3.setBackgroundColor(getResources().getColor(R.color.wrong));
+                corrAns3.setText("Correct answer : "+ans[2]);
+                corrAns3.setVisibility(View.VISIBLE);
             }
 
 
@@ -141,6 +158,8 @@ public class EasyQuizActivity extends AppCompatActivity {
                 total++;
             } else {
                 linearLayout4.setBackgroundColor(getResources().getColor(R.color.wrong));
+                corrAns4.setText("Correct answer : "+ans[3]);
+                corrAns4.setVisibility(View.VISIBLE);
             }
 
 
@@ -152,6 +171,8 @@ public class EasyQuizActivity extends AppCompatActivity {
                 total++;
             } else {
                 linearLayout5.setBackgroundColor(getResources().getColor(R.color.wrong));
+                corrAns5.setText("Correct answer : "+ans[4]);
+                corrAns5.setVisibility(View.VISIBLE);
             }
 
 
@@ -163,6 +184,8 @@ public class EasyQuizActivity extends AppCompatActivity {
                 total++;
             } else {
                 linearLayout6.setBackgroundColor(getResources().getColor(R.color.wrong));
+                corrAns6.setText("Correct answer : "+ans[5]);
+                corrAns6.setVisibility(View.VISIBLE);
             }
 
 
@@ -174,6 +197,8 @@ public class EasyQuizActivity extends AppCompatActivity {
                 total++;
             } else {
                 linearLayout7.setBackgroundColor(getResources().getColor(R.color.wrong));
+                corrAns7.setText("Correct answer : "+ans[6]);
+                corrAns7.setVisibility(View.VISIBLE);
             }
 
 
@@ -185,6 +210,8 @@ public class EasyQuizActivity extends AppCompatActivity {
                 total++;
             } else {
                 linearLayout8.setBackgroundColor(getResources().getColor(R.color.wrong));
+                corrAns8.setText("Correct answer : "+ans[7]);
+                corrAns8.setVisibility(View.VISIBLE);
             }
 
 
@@ -196,6 +223,8 @@ public class EasyQuizActivity extends AppCompatActivity {
                 total++;
             } else {
                 linearLayout9.setBackgroundColor(getResources().getColor(R.color.wrong));
+                corrAns9.setText("Correct answer : "+ans[8]);
+                corrAns9.setVisibility(View.VISIBLE);
             }
 
 
@@ -207,6 +236,8 @@ public class EasyQuizActivity extends AppCompatActivity {
                 total++;
             } else {
                 linearLayout10.setBackgroundColor(getResources().getColor(R.color.wrong));
+                corrAns10.setText("Correct answer : "+ans[9]);
+                corrAns10.setVisibility(View.VISIBLE);
             }
 
             LinearLayout fullLayout = (LinearLayout)findViewById(R.id.full);

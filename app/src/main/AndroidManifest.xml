@@ -89,79 +89,79 @@
         <activity android:name=".questionsActivity" />
         <activity
             android:name=".Chap1Activity"
-            android:label="Basics"
+            android:label="1 Basics"
             android:parentActivityName=".TutorialActivity" />
         <activity
             android:name=".Chap2Activity"
-            android:label="BSW"
+            android:label="2 BSW"
             android:parentActivityName=".TutorialActivity" />
         <activity
             android:name=".Chap3Activity"
-            android:label="Com STACK"
+            android:label="3 Com STACK"
             android:parentActivityName=".TutorialActivity" />
         <activity
             android:name=".Chap4Activity"
-            android:label="OS"
+            android:label="4 OS"
             android:parentActivityName=".TutorialActivity" />
         <activity
             android:name=".Chap5Activity"
-            android:label="RTE"
+            android:label="5 RTE"
             android:parentActivityName=".TutorialActivity" />
         <activity
             android:name=".Chap1_1Activity"
-            android:label="Fundamentals"
+            android:label="1.1 Fundamentals"
             android:parentActivityName=".Chap1Activity" />
         <activity
             android:name=".Chap1_2Activity"
-            android:label="Architecture"
+            android:label="1.2 Architecture"
             android:parentActivityName=".Chap1Activity" />
         <activity
             android:name=".Chap2_1Activity"
-            android:label="Diagnostics"
+            android:label="2.1 Diagnostics"
             android:parentActivityName=".Chap2Activity" />
         <activity
             android:name=".Chap2_2Activity"
-            android:label="Mode Management"
+            android:label="2.2 Mode Management"
             android:parentActivityName=".Chap2Activity" />
         <activity
             android:name=".Chap2_3Activity"
-            android:label="Complex Device Drivers"
+            android:label="2.3 Complex Device Drivers"
             android:parentActivityName=".Chap2Activity" />
         <activity
             android:name=".Chap3_1Activity"
-            android:label="AUTOSAR BSW Fundamentals"
+            android:label="3.1 AUTOSAR BSW Fundamentals"
             android:parentActivityName=".Chap3Activity" />
         <activity
             android:name=".Chap3_2Activity"
-            android:label="AUTOSAR COM Stack"
+            android:label="3.2 AUTOSAR COM Stack"
             android:parentActivityName=".Chap3Activity" />
         <activity
             android:name=".Chap3_1_2Activity"
-            android:label="Sub-Layers"
+            android:label="3.1.2 Sub-Layers"
             android:parentActivityName=".Chap3_1Activity" />
         <activity
             android:name=".Chap3_2_5Activity"
-            android:label="FR/ CAN/ LIN Stack"
+            android:label="3.2.5 FR/ CAN/ LIN Stack"
             android:parentActivityName=".Chap3_2Activity" />
         <activity
             android:name=".Chap4_1Activity"
-            android:label="AUTOSAR Memory Stack"
+            android:label="4.1 AUTOSAR Memory Stack"
             android:parentActivityName=".Chap4Activity" />
         <activity
             android:name=".Chap4_2Activity"
-            android:label="AUTOSAR OS"
+            android:label="4.2 AUTOSAR OS"
             android:parentActivityName=".Chap4Activity" />
         <activity
             android:name=".Chap4_3Activity"
-            android:label="Measurement and Calibration"
+            android:label="4.3 Measurement and Calibration"
             android:parentActivityName=".Chap4Activity" />
         <activity
             android:name=".Chap4_2_2Activity"
-            android:label="Features of OS"
+            android:label="4.2.2 Features of OS"
             android:parentActivityName=".Chap4_2Activity" />
         <activity
             android:name=".Chap5_1Activity"
-            android:label="AUTOSAR RunTimeEnvironment (RTE)"
+            android:label="5 AUTOSAR RunTimeEnvironment (RTE)"
             android:parentActivityName=".TutorialActivity" />
         <!-- android:parentActivityName=".Chap5Activity" /> -->
         <activity android:name=".Chap5_2Activity" />

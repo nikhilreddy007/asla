@@ -48,7 +48,7 @@
                             android:layout_width="64dp"
                             android:layout_height="64dp"
                             android:gravity="center"
-                            android:background="@drawable/purple_resource_file"
+                            android:background="@drawable/lightblue_resource_file"
                             android:text="1"
                             android:textColor="@color/white"
                             android:textSize="32sp"

@@ -1,308 +1,320 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.otaliastudios.zoom.ZoomLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/zoomlayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:scrollbars="vertical|horizontal"
+    app:overScrollHorizontal="true"
+    app:overScrollVertical="true"
+    app:overPinchable="true"
+    app:horizontalPanEnabled="true"
+    app:verticalPanEnabled="true"
+    app:zoomEnabled="true"
+    app:minZoom="1.0"
+    app:minZoomType="zoom"
+    app:maxZoom="6.0"
+    app:maxZoomType="zoom"
+    app:hasClickableChildren="false">
     tools:context="com.example.nikhilreddy.ass.displayContent">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <!--<com.example.nikhilreddy.ass.ZoomLinearLayout-->
-            <!--android:id="@+id/zoom_linear_layout"-->
+        <!--<ScrollView-->
             <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent">-->
+            <!--android:layout_height="wrap_content">-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical" >
+            <!--<com.example.nikhilreddy.ass.ZoomLinearLayout-->
+                <!--android:id="@+id/zoom_linear_layout"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
 
-                <TextView
-                    android:id="@+id/title_textview"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="32sp"
-                    android:textStyle="bold"
-                    android:gravity="center_horizontal"
-                    android:padding="10dp"
-                    android:textColor="#000000"/>
+                    android:orientation="vertical" >
 
-                <TextView
-                    android:id="@+id/matter_textview1"
-                    android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:padding="10dp"
-                    android:textColor="#000000" />
+                    <TextView
+                        android:id="@+id/title_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
+                        android:textColor="#000000"/>
 
-                <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
-                    android:id="@+id/image_view1"
-                    android:visibility="gone"
-                    android:adjustViewBounds="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp" />
+                    <TextView
+                        android:id="@+id/matter_textview1"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textColor="#000000" />
 
-                <TextView
-                    android:id="@+id/matter_textview2"
-                    android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:padding="10dp"
-                    android:textColor="#000000" />
+                    <ImageView
+                        android:id="@+id/image_view1"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" />
 
-                <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
-                    android:id="@+id/image_view2"
-                    android:visibility="gone"
-                    android:adjustViewBounds="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp" />
+                    <TextView
+                        android:id="@+id/matter_textview2"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textColor="#000000" />
 
-                <TextView
-                    android:id="@+id/matter_textview3"
-                    android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:padding="10dp"
-                    android:textColor="#000000" />
+                    <ImageView
+                        android:id="@+id/image_view2"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" />
 
-                <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
-                    android:id="@+id/image_view3"
-                    android:visibility="gone"
-                    android:adjustViewBounds="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp" />
+                    <TextView
+                        android:id="@+id/matter_textview3"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textColor="#000000" />
 
-                <TextView
-                    android:id="@+id/matter_textview4"
-                    android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:padding="10dp"
-                    android:textColor="#000000" />
+                    <ImageView
+                        android:id="@+id/image_view3"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" />
 
-                <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
-                    android:id="@+id/image_view4"
-                    android:visibility="gone"
-                    android:adjustViewBounds="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp" />
+                    <TextView
+                        android:id="@+id/matter_textview4"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textColor="#000000" />
 
-                <TextView
-                    android:id="@+id/matter_textview5"
-                    android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:padding="10dp"
-                    android:textColor="#000000" />
+                    <ImageView
+                        android:id="@+id/image_view4"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" />
 
-                <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
-                    android:id="@+id/image_view5"
-                    android:visibility="gone"
-                    android:adjustViewBounds="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp" />
+                    <TextView
+                        android:id="@+id/matter_textview5"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textColor="#000000" />
 
-                <TextView
-                    android:id="@+id/matter_textview6"
-                    android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:padding="10dp"
-                    android:textColor="#000000" />
+                    <ImageView
+                        android:id="@+id/image_view5"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" />
 
-                <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
-                    android:id="@+id/image_view6"
-                    android:visibility="gone"
-                    android:adjustViewBounds="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp" />
+                    <TextView
+                        android:id="@+id/matter_textview6"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textColor="#000000" />
 
-                <TextView
-                    android:id="@+id/matter_textview7"
-                    android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:padding="10dp"
-                    android:textColor="#000000" />
+                    <ImageView
+                        android:id="@+id/image_view6"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" />
 
-                <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
-                    android:id="@+id/image_view7"
-                    android:visibility="gone"
-                    android:adjustViewBounds="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp" />
+                    <TextView
+                        android:id="@+id/matter_textview7"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textColor="#000000" />
 
-                <TextView
-                    android:id="@+id/matter_textview8"
-                    android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:padding="10dp"
-                    android:textColor="#000000" />
+                    <ImageView
+                        android:id="@+id/image_view7"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" />
 
-                <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
-                    android:id="@+id/image_view8"
-                    android:visibility="gone"
-                    android:adjustViewBounds="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp" />
+                    <TextView
+                        android:id="@+id/matter_textview8"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textColor="#000000" />
 
-                <TextView
-                    android:id="@+id/matter_textview9"
-                    android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:padding="10dp"
-                    android:textColor="#000000" />
+                    <ImageView
+                        android:id="@+id/image_view8"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" />
 
-                <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
-                    android:id="@+id/image_view9"
-                    android:visibility="gone"
-                    android:adjustViewBounds="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp" />
+                    <TextView
+                        android:id="@+id/matter_textview9"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textColor="#000000" />
 
-                <TextView
-                    android:id="@+id/matter_textview10"
-                    android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:padding="10dp"
-                    android:textColor="#000000" />
+                    <ImageView
+                        android:id="@+id/image_view9"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" />
 
-                <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
-                    android:id="@+id/image_view10"
-                    android:visibility="gone"
-                    android:adjustViewBounds="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp" />
+                    <TextView
+                        android:id="@+id/matter_textview10"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textColor="#000000" />
 
-                <TextView
-                    android:id="@+id/matter_textview11"
-                    android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:padding="10dp"
-                    android:textColor="#000000" />
+                    <ImageView
+                        android:id="@+id/image_view10"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" />
 
-                <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
-                    android:id="@+id/image_view11"
-                    android:visibility="gone"
-                    android:adjustViewBounds="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp" />
+                    <TextView
+                        android:id="@+id/matter_textview11"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textColor="#000000" />
 
-                <TextView
-                    android:id="@+id/matter_textview12"
-                    android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:padding="10dp"
-                    android:textColor="#000000" />
+                    <ImageView
+                        android:id="@+id/image_view11"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" />
 
-                <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
-                    android:id="@+id/image_view12"
-                    android:visibility="gone"
-                    android:adjustViewBounds="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp" />
+                    <TextView
+                        android:id="@+id/matter_textview12"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textColor="#000000" />
 
-                <TextView
-                    android:id="@+id/matter_textview13"
-                    android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:padding="10dp"
-                    android:textColor="#000000" />
+                    <ImageView
+                        android:id="@+id/image_view12"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" />
 
-                <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
-                    android:id="@+id/image_view13"
-                    android:visibility="gone"
-                    android:adjustViewBounds="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp" />
+                    <TextView
+                        android:id="@+id/matter_textview13"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textColor="#000000" />
 
-                <TextView
-                    android:id="@+id/matter_textview14"
-                    android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:padding="10dp"
-                    android:textColor="#000000" />
+                    <ImageView
+                        android:id="@+id/image_view13"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" />
 
-                <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
-                    android:id="@+id/image_view14"
-                    android:visibility="gone"
-                    android:adjustViewBounds="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp" />
+                    <TextView
+                        android:id="@+id/matter_textview14"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textColor="#000000" />
 
-                <TextView
-                    android:id="@+id/matter_textview15"
-                    android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:padding="10dp"
-                    android:textColor="#000000" />
+                    <ImageView
+                        android:id="@+id/image_view14"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" />
 
-                <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
-                    android:id="@+id/image_view15"
-                    android:visibility="gone"
-                    android:adjustViewBounds="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp" />
+                    <TextView
+                        android:id="@+id/matter_textview15"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textColor="#000000" />
 
-                <TextView
-                    android:id="@+id/matter_textview16"
-                    android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:padding="10dp"
-                    android:textColor="#000000" />
+                    <ImageView
+                        android:id="@+id/image_view15"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" />
 
-                <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
-                    android:id="@+id/image_view16"
-                    android:visibility="gone"
-                    android:adjustViewBounds="true"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp" />
-            </LinearLayout>
-        <!--</com.example.nikhilreddy.ass.ZoomLinearLayout>-->
-    </ScrollView>
-</LinearLayout>
+                    <TextView
+                        android:id="@+id/matter_textview16"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:textColor="#000000" />
+
+                    <ImageView
+                        android:id="@+id/image_view16"
+                        android:visibility="gone"
+                        android:adjustViewBounds="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" />
+                </LinearLayout>
+            <!--</com.example.nikhilreddy.ass.ZoomLinearLayout>-->
+</com.otaliastudios.zoom.ZoomLayout>

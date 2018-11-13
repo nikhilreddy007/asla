@@ -17,13 +17,13 @@
         android:textStyle="bold"
         android:textSize="30dp"
         android:padding="10sp"
-        android:textColor="#000000"/>
+        android:textColor="#FFFFFF"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Autosar has paved automotive companies to focus more on implementation by maintaining a common standard at all the levels. The fundamental concept of autosar is to separate application and infrastructure to achieve the goals
 The goals of the standard in view are,
-Scalability to different vehicle and platform variants.\n\n
+Scalability to different vehicle and platform variants.\n
 Transferability: Optimize the use of resources available throughout a vehicles electronic architecture.
 Consideration and availability of safety requirements.
 Collaboration between various partners.
@@ -32,7 +32,7 @@ Maintainability through whole PLC (Product Life Cycle).
 More focus on end product of the business.\n\n
 Modularity: Enables tailoring of software according to the individual requirements.
 "
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textStyle="bold"
         android:textSize="18sp"
         android:padding="10dp"/>
